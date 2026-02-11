@@ -153,49 +153,37 @@ We'll create 4 partitions:
 | # | Size | Type | Purpose |
 |---|---|---|---|
 | 1 | 512 MiB | EFI System | ESP (bootloader) |
-| 2 | ~remaining - home - swap | Linux filesystem | Root `/` |
+| 2 | 100 GiB | Linux filesystem | Root `/` |
 | 3 | 4 GiB | Linux swap | Swap |
-| 4 | remaining | Linux filesystem | `/home` |
+| 4 | Remaining | Linux filesystem | `/home` |
 
 > **Layout suggestion:** If your NVMe is 1TB, something like 512M EFI + 100G root
 > + 4G swap + ~860G home works well. Adjust to your preference.
 
 ```bash
-fdisk $DISK
+cfdisk $DISK
 ```
 
-Inside fdisk:
+Inside cfdisk (TUI — use arrow keys to navigate, Enter to select):
 
 ```
-g           ← Create a new GPT partition table (WIPES ALL DATA ON THIS DRIVE)
+1. If prompted for a label type, select "gpt"
+   (This creates a new GPT partition table — WIPES ALL DATA ON THIS DRIVE)
 
-n           ← New partition (ESP)
-1           ← Partition number 1
-[Enter]     ← Default first sector
-+512M       ← 512 MiB
-t           ← Change type
-1           ← Type "EFI System"
+2. Select "New" → enter 512M → then select "Type" → choose "EFI System"
+   This creates partition 1 (ESP)
 
-n           ← New partition (root)
-2           ← Partition number 2
-[Enter]     ← Default first sector
-+100G       ← 100 GiB for root (adjust as you like, minimum ~10G)
+3. Arrow-down to the free space → select "New" → enter 100G
+   This creates partition 2 (root, defaults to "Linux filesystem")
 
-n           ← New partition (swap)
-3           ← Partition number 3
-[Enter]     ← Default first sector
-+4G         ← 4 GiB swap
+4. Arrow-down to the free space → select "New" → enter 4G
+   Then select "Type" → choose "Linux swap"
+   This creates partition 3 (swap)
 
-n           ← New partition (home)
-4           ← Partition number 4
-[Enter]     ← Default first sector
-[Enter]     ← Use all remaining space
+5. Arrow-down to the free space → select "New" → press Enter to accept remaining space
+   This creates partition 4 (home, defaults to "Linux filesystem")
 
-t           ← Change type (for swap)
-3           ← Partition 3
-19          ← Type "Linux swap"
-
-w           ← Write and exit
+6. Select "Write" → type "yes" to confirm → select "Quit"
 ```
 
 ---
