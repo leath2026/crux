@@ -460,6 +460,49 @@ Device Drivers → Network device support → Wireless LAN →
 
 > You'll also need `linux-firmware` (already selected) for WiFi firmware blobs.
 
+#### USB support (REQUIRED — for USB ports, flash drives, peripherals):
+
+```
+Device Drivers → USB support →
+    <*> Support for Host-side USB                      [CONFIG_USB_SUPPORT=y]
+    <*> xHCI HCD (USB 3.0) support                    [CONFIG_USB_XHCI_HCD=y]
+    <*>   xHCI support for AMD SoCs (Ryzen/EPYC)      [CONFIG_USB_XHCI_PCI=y]
+    <*> EHCI HCD (USB 2.0) support                    [CONFIG_USB_EHCI_HCD=y]
+    <*> USB Mass Storage support                       [CONFIG_USB_STORAGE=y]
+```
+
+> `xHCI` covers USB 3.x ports; `EHCI` covers USB 2.0. The B870 Taichi Lite
+> has both. `USB_STORAGE` is needed for USB flash drives and external disks.
+> All of these can be built-in (`=y`) — they're small and always useful.
+
+#### DVD/Blu-ray burner (optical drive support):
+
+```
+Device Drivers → SCSI device support →
+    <*> SCSI CDROM support                             [CONFIG_BLK_DEV_SR=y]
+
+Device Drivers → ATA/ATAPI/MFM/RLL support (or Serial ATA/Parallel ATA) →
+    <*> AHCI SATA support                              [CONFIG_SATA_AHCI=y]
+
+File systems → CD-ROM/DVD Filesystems →
+    <*> ISO 9660 CDROM file system support             [CONFIG_ISO9660_FS=y]
+    [*]   Microsoft Joliet CDROM extensions             [CONFIG_JOLIET=y]
+    <*> UDF file system support                        [CONFIG_UDF_FS=y]
+```
+
+> `BLK_DEV_SR` is the SCSI CD-ROM driver — it handles DVD and Blu-ray drives
+> too (Linux treats optical drives as SCSI devices regardless of interface).
+> `SATA_AHCI` you likely already have enabled for your NVMe/SATA controller.
+> `ISO9660` and `UDF` let you read data discs and movie/video discs.
+>
+> **To burn discs**, you'll also need userspace tools after the system is
+> running. Install them with `prt-get`:
+>
+> ```bash
+> prt-get depinst cdrtools      # provides cdrecord, mkisofs
+> prt-get depinst dvd+rw-tools  # provides growisofs for DVD+R/RW
+> ```
+
 ### Build the kernel
 
 ```bash
