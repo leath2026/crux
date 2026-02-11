@@ -1,0 +1,1290 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+<!--HTMLHeader1--><link rel="stylesheet" type="text/css"
+  href="https://crux.nu/pub/lib/pmwiki-core.css" /><script type="text/javascript"
+  src="https://crux.nu/pub/lib/pmwiki-lib.js"></script>
+
+  <title>CRUX | Main / Handbook3-8 </title>
+  <meta http-equiv='Content-Style-Type' content='text/css' />
+  <link rel='stylesheet' href='https://crux.nu/pub/skins/crux/pmwiki.css' type='text/css' />
+  <link rel="alternate" title="CRUX RSS" href="http://crux.nu/rss.php" type="application/rss+xml">
+  <!--HTMLHeader--><style type='text/css'><!--
+  .indent1 {margin-left:1.25em;}
+  .indent2 {margin-left:2.5em;}
+  .indent3 {margin-left:3.75em;}
+  .indent4 {margin-left:5em;}
+
+  .toc1 {margin-left:1em;}
+  .toc2 {margin-left:2em;}
+  .toc3 {margin-left:3em;}
+  .toc4 {margin-left:4em;}
+
+--></style>  <meta name='robots' content='index,follow' />
+<meta name='description' content='The handbook for CRUX {$:VERSION' />
+<script type='text/javascript' src='https://crux.nu/pub/lib/pmwiki-utils.js?st=1770750714'
+          data-config='{&quot;fullname&quot;:&quot;Main.Handbook3-8&quot;,&quot;sortable&quot;:1,&quot;highlight&quot;:0,&quot;copycode&quot;:&quot;&quot;,&quot;toggle&quot;:0,&quot;localtimes&quot;:0,&quot;rediquiet&quot;:0,&quot;updrop&quot;:false,&quot;pmtoc&quot;:{&quot;Enable&quot;:0,&quot;MaxLevel&quot;:6,&quot;MinNumber&quot;:3,&quot;ParentElement&quot;:&quot;&quot;,&quot;NumberedHeadings&quot;:&quot;&quot;,&quot;EnableBacklinks&quot;:0,&quot;EnableQMarkup&quot;:0,&quot;contents&quot;:&quot;Contents&quot;,&quot;hide&quot;:&quot;hide&quot;,&quot;show&quot;:&quot;show&quot;}}' data-fullname='Main.Handbook3-8'></script>
+</head>
+<body>
+<!--PageHeaderFmt-->
+<div class="header">
+	<h2>CRUX : <a href="https://crux.nu/Main/HomePage">Home</a></h2>
+	<a href="https://crux.nu/Main/HomePage" title="">Home</a> :: 
+	<a href="https://crux.nu/Main/Documentation" title="">Documentation</a> :: 
+	<a href="https://crux.nu/Main/Download" title="">Download</a> :: 
+	<a href="https://crux.nu/Main/Development" title="">Development</a> :: 
+	<a href="https://crux.nu/Main/Community" title="">Community</a> :: 
+	<a href="https://crux.nu/Wiki/HomePage" title="">Wiki</a> :: 
+	<a href="https://crux.nu/portdb/" title="">Ports</a> :: 
+	<a href="https://crux.nu/Main/Bugs" title="">Bugs</a> ::
+	<a href="https://crux.nu/Main/Links" title="">Links</a> :: 
+	<a href="https://crux.nu/Main/About" title="">About</a> 	
+</div>
+<!--/PageHeaderFmt-->
+<div id="permslink">
+<a href="https://crux.nu/Main/UserSettings" title="">Settings/Register</a>
+
+</div>
+<!--PageActionFmt-->
+<!-- <div class="page" ondblclick="if (!document.getElementById('text')) {document.location='https://crux.nu/Main/Handbook3-8?action=edit'};"> -->
+<div class="page">
+<!--   <div id='wikititle'>
+     <div class='pagegroup'><a href='https://crux.nu/Main'>Main</a> /</div>
+   <h1 class='pagetitle'>Handbook3-8</h1></div> -->
+<!--PageTitleFmt-->
+<!--PageText-->
+<div id='wikitext'>
+<p class='vspace'><h1>
+Handbook for CRUX 3.8</h1><p>
+<p><div class='tocstyle'>
+<span class='toc1'>
+    1. <a href='#ntoc1'>Preface</a></span><br />
+<span class='toc1'>
+    2. <a href='#ntoc2'>Introduction</a></span><br />
+<span class='toc2'>
+    2.1. <a href='#ntoc3'>What is CRUX?</a></span><br />
+<span class='toc2'>
+    2.2. <a href='#ntoc4'>Why use CRUX?</a></span><br />
+<span class='toc2'>
+    2.3. <a href='#ntoc5'>License</a></span><br />
+<span class='toc3'>
+    2.3.1. <a href='#ntoc6'>Packages</a></span><br />
+<span class='toc3'>
+    2.3.2. <a href='#ntoc7'>Build Scripts</a></span><br />
+<span class='toc3'>
+    2.3.3. <a href='#ntoc8'>NO WARRANTY</a></span><br />
+<span class='toc1'>
+    3. <a href='#ntoc9'>Installing CRUX</a></span><br />
+<span class='toc2'>
+    3.1. <a href='#ntoc10'>Supported Hardware / Requirements</a></span><br />
+<span class='toc2'>
+    3.2. <a href='#ntoc11'> Installing or Upgrading From Optical Medium or Removable Flash Drive</a></span><br />
+<span class='toc3'>
+    3.2.1. <a href='#ntoc12'> Prepare the Boot Medium</a></span><br />
+<span class='toc3'>
+    3.2.2. <a href='#ntoc13'> Partition the Disks</a></span><br />
+<span class='toc3'>
+    3.2.3. <a href='#ntoc14'> Mount Disks and Run the Setup Script</a></span><br />
+<span class='toc3'>
+    3.2.4. <a href='#ntoc15'> Chroot and Build a Kernel</a></span><br />
+<span class='toc3'>
+    3.2.5. <a href='#ntoc16'>Install a Bootloader</a></span><br />
+<span class='toc1'>
+    4. <a href='#ntoc17'>Configuration</a></span><br />
+<span class='toc2'>
+    4.1. <a href='#ntoc18'>Initialization Scripts</a></span><br />
+<span class='toc3'>
+    4.1.1. <a href='#ntoc19'>Runlevels</a></span><br />
+<span class='toc3'>
+    4.1.2. <a href='#ntoc20'>Layout</a></span><br />
+<span class='toc3'>
+    4.1.3. <a href='#ntoc21'> Configuration Variables in /etc/rc.conf</a></span><br />
+<span class='toc2'>
+    4.2. <a href='#ntoc22'> Generating locales</a></span><br />
+<span class='toc2'>
+    4.3. <a href='#ntoc23'>Network Configuration</a></span><br />
+<span class='toc2'>
+    4.4. <a href='#ntoc24'>Passwords and User Environment</a></span><br />
+<span class='toc2'>
+    4.5. <a href='#ntoc25'>Upgrading the Kernel</a></span><br />
+<span class='toc1'>
+    5. <a href='#ntoc26'>The Package System</a></span><br />
+<span class='toc2'>
+    5.1. <a href='#ntoc27'>Introduction</a></span><br />
+<span class='toc2'>
+    5.2. <a href='#ntoc28'>Using the Package System</a></span><br />
+<span class='toc3'>
+    5.2.1. <a href='#ntoc29'>Installing a Package</a></span><br />
+<span class='toc3'>
+    5.2.2. <a href='#ntoc30'> Upgrading a Package</a></span><br />
+<span class='toc3'>
+    5.2.3. <a href='#ntoc31'>Removing a Package</a></span><br />
+<span class='toc3'>
+    5.2.4. <a href='#ntoc32'>Querying the Package Database</a></span><br />
+<span class='toc2'>
+    5.3. <a href='#ntoc33'>Creating Packages</a></span><br />
+<span class='toc2'>
+    5.4. <a href='#ntoc34'>Adjusting/Configuring the Package Build Process</a></span><br />
+<span class='toc2'>
+    5.5. <a href='#ntoc35'>Package Guidelines</a></span><br />
+<span class='toc3'>
+    5.5.1. <a href='#ntoc36'>General</a></span><br />
+<span class='toc3'>
+    5.5.2. <a href='#ntoc37'>Directories</a></span><br />
+<span class='toc3'>
+    5.5.3. <a href='#ntoc38'>Remove Junk Files</a></span><br />
+<span class='toc3'>
+    5.5.4. <a href='#ntoc39'>Pkgfile Variables</a></span><br />
+<span class='toc3'>
+    5.5.5. <a href='#ntoc40'>Pkgfile Header</a></span><br />
+<span class='toc2'>
+    5.6. <a href='#ntoc41'>Building ports as unprivileged user</a></span><br />
+<span class='toc2'>
+    5.7. <a href='#ntoc42'>Ports Collections</a></span><br />
+<span class='toc3'>
+    5.7.1. <a href='#ntoc43'>The official collections 'core', 'opt', 'xorg' and 'compat-32'</a></span><br />
+<span class='toc3'>
+    5.7.2. <a href='#ntoc44'>The user contributed collection 'contrib'</a></span><br />
+<span class='toc3'>
+    5.7.3. <a href='#ntoc45'>The individual collections from CRUX users</a></span><br />
+<span class='toc2'>
+    5.8. <a href='#ntoc46'>Package Management Frontend: prt-get</a></span><br />
+<span class='toc3'>
+    5.8.1. <a href='#ntoc47'>Functionality</a></span><br />
+<span class='toc3'>
+    5.8.2. <a href='#ntoc48'>Configuring prt-get</a></span><br />
+<span class='toc4'>
+    5.8.2.1. <a href='#ntoc49'>/etc/prt-get.conf</a></span><br />
+<span class='toc4'>
+    5.8.2.2. <a href='#ntoc50'>/etc/prt-get.aliases</a></span><br />
+<span class='toc1'>
+    6. <a href='#ntoc51'>Appendix</a></span><br />
+<span class='toc2'>
+    6.1. <a href='#ntoc52'>Troubleshooting</a></span><br />
+<span class='toc2'>
+    6.2. <a href='#ntoc53'>Writing a grub config file by hand</a></span><br />
+<span class='toc2'>
+    6.3. <a href='#ntoc54'>EFI Stub installation notes</a></span><br />
+<span class='toc2'>
+    6.4. <a href='#ntoc55'>Notes on Initramfs</a></span><br /></div>
+</p>
+<p class='vspace'><h1>
+<a id='ntoc1'></a>1. Preface</h1><p>
+<p><a class='wikilink' href='https://crux.nu/Profiles/PerLiden'>Per Lidén</a> wrote this handbook. RobertMcMeekin converted it to DocBook, the <a class='wikilink' href='https://crux.nu/Main/About'>CRUX team</a> made a Wiki version. Numerous others have given feedback and improvement suggestions.
+</p>
+<p class='vspace'><h1>
+<a id='ntoc2'></a>2. Introduction</h1><p>
+<p><h2>
+<a id='ntoc3'></a>2.1. What is CRUX?</h2><p>
+<p>CRUX is a lightweight Linux distribution for the x86-64 architecture targeted at experienced Linux users. The primary focus of this distribution is "keep it simple", which it reflects in a simple tar.gz-based package system, BSD-style initscripts, and a relatively small collection of trimmed packages. The secondary focus is utilization of new Linux features and recent tools and libraries. CRUX also has a ports system which makes it easy to install and upgrade applications.
+</p>
+<p class='vspace'><h2>
+<a id='ntoc4'></a>2.2. Why use CRUX?</h2><p>
+<p>There are many Linux distributions out there these days, so what makes CRUX such an appealing choice to its users? The choice of distribution is a matter of taste, really. Here are a few hints about the tastes and goals of the people behind CRUX. CRUX is made with simplicity in mind from beginning to end. Making it easy to create new and update old packages is essential; updating a package in CRUX is often just a matter of typing <span  style='color: #007a00;'>sudo prt-get update $MYPKG</span>. The usage of ports helps keep your packages up to date; not the latest bleeding-edge-alpha version, but the latest stable version. Other features include packages optimized for your processor, e.g. by compiling with -march=x86-64, and a filesystem uncluttered by files you'll never use, e.g. /usr/share/doc/*. Lastly, while the CRUX development team strives to introduce new features as soon as they reach stable status, such innovations are carefully screened to ensure that they work in CRUX without drastic changes to the upstream sources or to the rest of the CRUX system.
+</p>
+<p class='vspace'>In short, CRUX might suit you very well if you are:
+</p>
+<div class='vspace'></div><ul><li>A somewhat experienced Linux user who wants a clean and solid Linux distribution as the foundation of your installation.
+</li><li>Someone who appreciates the challenge of navigating third-party source trees and figuring out what it takes to compile them.
+</li><li>Someone who has the patience to rebuild large packages on a regular basis.
+</li><li>Someone who enjoys exploring and discussing with other enthusiasts the intricacies of putting together an operating system.
+</li></ul><div class='vspace'></div><div class='img imgonly'><span class='lfloat'> <img src='http://crux.nu/doc/images/note.png' alt='' /></span></div>
+<p><strong>Note</strong><br clear='all' />
+<em>If you are using CRUX, we highly recommend subscribing to our low-volume <a class='wikilink' href='https://crux.nu/Main/MailingLists'>mailing list</a> because security updates and updates that need user action are announced there.</em>
+</p>
+<p class='vspace'><h2>
+<a id='ntoc5'></a>2.3. License</h2><p>
+<p><h3>
+<a id='ntoc6'></a>2.3.1. Packages</h3><p>
+<p>Since CRUX is a Linux distribution, it contains software written by a lot of different people. Each software package comes with its own license, chosen by its author(s). To find out how a particular package is licensed, have a look at its source code.
+</p>
+<p class='vspace'><h3>
+<a id='ntoc7'></a>2.3.2. Build Scripts</h3><p>
+<p>All package build scripts in CRUX (in package categories <span  style='color: #007a00;'>core</span>, <span  style='color: #007a00;'>opt</span>, <span  style='color: #007a00;'>xorg</span>, and <span  style='color: #007a00;'>compat-32</span>) are Copyright © 2000-2025 by Per Lidén and the CRUX development team and are released under the <a class='urllink' href='http://www.gnu.org/copyleft/gpl.html' rel='nofollow'>GNU General Public License</a>.
+</p>
+<p class='vspace'><h3>
+<a id='ntoc8'></a>2.3.3. NO WARRANTY</h3><p>
+<p>CRUX is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. Use it at YOUR OWN RISK.
+</p>
+<p class='vspace'><h1>
+<a id='ntoc9'></a>3. Installing CRUX</h1><p>
+<p><h2>
+<a id='ntoc10'></a>3.1. Supported Hardware / Requirements</h2><p>
+<p>Packages on the official CRUX ISO image are compiled with optimization for x86-64 (AMD Athlon 64, Intel Core, Intel Atom) or newer processors. Do not try to install it on an i686 (Pentium-Pro, Celeron, Pentium-III) or lower processor, since it simply will not work.
+</p>
+<p class='vspace'>A minimum of 2GB system memory is required to install CRUX from a DVD or removable flash drive. It is possible to perform a custom chroot installation with a smaller amount of RAM.
+</p>
+<p class='vspace'>The kernel used during installation, i.e. when booting from the CRUX ISO image (El Torito), is compiled with support for most disk controllers. If your hard disk is not recognized after booting from the ISO image (i.e., the output of <code>lsblk</code> only shows the CRUX media), you might find a solution in the <a class='urllink' href='https://crux.nu/Wiki/HomePage' rel='nofollow'>CRUX wiki</a>, the <a class='urllink' href='https://lists.crux.nu/' rel='nofollow'>mailing lists</a>, or the <a class='urllink' href='https://git.crux.nu/issues' rel='nofollow'>bug tracker</a>. You could also ask for help on the <a class='urllink' href='https://crux.nu/Main/IrcChannels' rel='nofollow'>CRUX IRC channels</a>. For example, the owner of a low-power machine that uses a board soldered memory card as its main disk was able to install CRUX successfully after building an ISO with kernel customized to enable <code>CONFIG_X86_INTEL_LPSS</code>.
+</p>
+<p class='vspace'><h2>
+<a id='ntoc11'></a>3.2. <a id='InstallingFromCD-ROM'></a> Installing or Upgrading From Optical Medium or Removable Flash Drive</h2><p>
+<p><h3>
+<a id='ntoc12'></a>3.2.1. <a id='WriteBootMedium'></a> Prepare the Boot Medium</h3><p>
+<p>Download the CRUX ISO image (<span  style='color: #007a00;'>crux-3.8.iso</span>). To ensure that the download was successful, examine its checksum.
+</p>
+<div class='vspace'></div><pre> $ shasum -a 256 crux-3.8.iso
+</pre><p class='vspace'>Compare the output with the file <span  style='color: #007a00;'>crux-3.8.sha256</span>, which can be found in the same directory as the ISO image on the download site. If the checksums match, the download was successful and you can continue by burning the ISO image to a DVD or writing it to a removable flash drive.
+</p>
+<p class='vspace'>The ISO image is bootable. After making sure that your BIOS gives priority to optical drives or flash drives, just insert the newly-written DVD or removable flash drive and reboot your computer. Press <code>Enter</code> at the boot prompt (you might have to adjust the <code>root=</code> parameter, depending on your hardware configuration). You will be logged in as <strong>root</strong> on tty1 (<strong>root</strong> has no password set).
+</p>
+<p class='vspace'><h3>
+<a id='ntoc13'></a>3.2.2. <a id='PartitionDisks'></a> Partition the Disks</h3><p>
+<p>If performing a clean installation, create (if necessary) and format the partition(s) you want CRUX to be installed on. <em>You can skip this step when performing an upgrade.</em> Remember the choice you make for the filesystems (especially root)! The driver for your chosen filesystem must be compiled into your Linux kernel, or included on an initramfs.
+</p>
+<div class='vspace'></div><pre> $ fdisk /dev/sd?
+ $ mkfs.???? /dev/sd??
+ $ mkswap /dev/sd??
+</pre><div class='vspace'></div><div class='indent'><span class='lfloat'> <img src='https://crux.nu/doc/images/note.png' alt='' /></span>
+</div><p><strong>Note</strong><br clear='all' />
+</p><div class='indent'><em>Please keep in mind that SATA harddisks are usually detected as SCSI devices. The first SATA disk is called </em><span  style='color: #007a00;'>/dev/sda</span><em> instead of </em><span  style='color: #007a00;'>/dev/hda</span><em>. For more information about harddisk naming conventions please refer to the <a class='urllink' href='http://www.tldp.org/HOWTO/Partition/devices.html' rel='nofollow'>Linux Partition HOWTO</a>.</em>
+</div><p class='vspace'>The amount of disk space required depends on how many packages are selected to install. It is recommended to have at least a 5G root partition (CRUX will use about 500MB-1GB, depending on whether you create separate partition for <span  style='color: #007a00;'>/usr</span>, and other decisions you make in the setup process).
+</p>
+<p class='vspace'>The amount of swap space required depends on several factors, including whether you intend to use hibernation or build new packages in RAM. For more information about how memory is handled by modern Linux kernels, please refer to <a class='urllink' href='https://chrisdown.name/2018/01/02/in-defence-of-swap.html' rel='nofollow'>In Defense of Swap</a>.
+</p>
+<div class='vspace'></div><div class='indent'><span class='lfloat'> <img src='https://crux.nu/doc/images/note.png' alt='' /></span>
+</div><p><strong>Note: UEFI</strong><br clear='all' />
+</p><div class='indent'>For UEFI installation a GPT disklabel and an EFI system partition (ESP) are required in most cases. The ESP does not need to be very large (100MiB for example) and should be formatted with a FAT32 filesystem and flagged as bootable. When using UEFI the boot loader/manager will be installed in the ESP rather than the traditional method of installation into the Master Boot Record (MBR).
+<div class='vspace'></div></div><div class='indent'><span class='lfloat'> <img src='https://crux.nu/doc/images/note.png' alt='' /></span>
+</div><p><strong>Note: MBR</strong><br clear='all' />
+</p><div class='indent'>If your BIOS does not support UEFI boot mode (or you have disabled it in favor of legacy MBR mode), then you do not need to create a separate small partition for EFI loaders or kernel images. One large partition for <span  style='color: #007a00;'>/</span> is enough in such cases, and GRUB should be able to find a Linux kernel saved in the subdirectory <span  style='color: #007a00;'>/boot</span>. But selecting SYSLINUX for your bootloader will require you to flag as bootable whichever partition contains <span  style='color: #007a00;'>syslinux.cfg</span>. See <a href='#BootLoader-Setup'>Installing a Bootloader</a> below for more details.
+</div><p class='vspace'>CRUX supports all the filesystems supported as root filesystems by the Linux kernel: btrfs, ext2, ext3, ext4, JFS, reiserfs and XFS.
+Further, it is highly recommended to separate the system data from user data, i.e. use a separate partition for <span  style='color: #007a00;'>/home</span> (and possibly <span  style='color: #007a00;'>/var</span>) since that will make your life a lot easier the day you want to upgrade, reinstall or remove your system.
+</p>
+<div class='vspace'></div><div class='indent'><span class='lfloat'> <img src='https://crux.nu/doc/images/note.png' alt='' /></span>
+</div><p><strong>Note</strong><br clear='all' />
+</p><div class='indent'><em>Make sure the appropriate userspace filesystem tools are installed. xfsprogs, btrfs-progs, jfsutils and reiserfsprogs can be found in the opt repository.</em>
+<div class='vspace'></div></div><div class='indent'><span class='lfloat'> <img src='https://crux.nu/doc/images/note.png' alt='' /></span>
+</div><p><strong>Note</strong><br clear='all' />
+</p><div class='indent'><em>Make sure that any BIOS Virus Protection option is DISABLED as this option may prevent <strong>fdisk</strong> from writing new partitions correctly.</em>
+</div><p class='vspace'><h3>
+<a id='ntoc14'></a>3.2.3. <a id='MountAndRunSetup'></a> Mount Disks and Run the Setup Script</h3><p>
+<ol><li>Mount the partition on which you want to install this distribution.
+</li></ol><pre> $ mount /dev/sd?? /mnt
+</pre><ol><li>If you want the installation to span more than one partition, mount those partitions as well. For example, if you want to have a different partition for <span  style='color: #007a00;'>/home</span> or <span  style='color: #007a00;'>/var</span>, then do:
+</li></ol><pre> $ mkdir /mnt/var
+ $ mount /dev/sd?? /mnt/var
+</pre><ol><li>Activate your swap partition(s).
+</li></ol><pre> $ swapon /dev/sd??
+</pre><ol><li>Type <strong>setup</strong> to start the package installation script. The script will ask where you mounted your new root partition and which packages you want to install. Select the packages you wish to install; it is recommended to install all the packages from <span  style='color: #007a00;'>core</span>.
+</li></ol><div class='vspace'></div><div class='indent'><span class='lfloat'> <img src='http://crux.nu/doc/images/note.png' alt='' /></span>
+</div><p><strong>Note: initramfs</strong><br clear='all' />
+</p><div class='indent'><em>If you plan to build a modular kernel, remember to select the <strong>dracut</strong> package from the <strong>opt</strong> collection.</em>
+<div class='vspace'></div></div><div class='indent'><span class='lfloat'> <img src='https://crux.nu/doc/images/note.png' alt='' /></span>
+</div><p><strong>Note: UEFI</strong><br clear='all' />
+</p><div class='indent'><em>If installing a UEFI system make sure to select the <strong>efibootmgr</strong> package from the <strong>opt</strong> collection during the package selection phase.</em> <strong>efibootmgr</strong> would be installed automatically during dependency resolution if you chose <strong>grub2-efi</strong> as your boot loader, but it's a good idea to start your CRUX experience paying close attention to the administrative tools you'll be using.
+<div class='vspace'></div></div><div class='indent'><span class='lfloat'> <img src='https://crux.nu/doc/images/note.png' alt='' /></span>
+</div><p><strong>Note: Upgrading an existing CRUX installation</strong><br clear='all' />
+</p><dl><dd><ul><li>Upgrading packages that were linked to soft dependencies <em>outside core and opt</em> will replace them with packages that were only linked to dependencies in core and opt. You will have to rebuild such packages if you want to retain the functionality of your existing CRUX system.
+</li><li>On the other hand, if it's been a while since you refreshed the ports tree on your existing CRUX system and rebuilt the outdated packages, an upgrade of all packages will save you from trouble (e.g. if some library introduced breaking changes).
+</li><li>The <strong>setup</strong> script uses the <span  style='color: #007a00;'>/etc/pkgadd.conf</span> of the target system to determine which files to upgrade, and which files not to upgrade. The files that are not upgraded are put in <span  style='color: #007a00;'>/var/lib/pkg/rejected/</span> (see the section <a href='#UpgradingaPackage'>"Upgrading a Package"</a> for advice on how to resolve such file conflicts).''
+</li></ul></dd></dl><p class='vspace'>After the packages have finished installing, the <strong>setup</strong> script will display an installation log. Make sure the last line in the log says <code>&#8220;0 error(s)&#8221;</code>.
+</p>
+<p class='vspace'>If you missed or forgot to install certain packages, you can just mount the CRUX installation medium and use <strong>pkgadd</strong> to install them.
+</p>
+<p class='vspace'><a class='urllink' href='https://crux.nu/doc/screenshots.html' rel='nofollow'>Screenshots of setup</a>
+</p>
+<p class='vspace'><h3>
+<a id='ntoc15'></a>3.2.4. <a id='ChrootAndBuildKernel'></a> Chroot and Build a Kernel</h3><p>
+<p>Now it's time to compile your kernel and do basic system configuration. The kernel compilation requires that you &#8220;chroot&#8221; into your new CRUX installation.
+</p>
+<div class='vspace'></div><div class='indent'><span class='lfloat'><img src='http://crux.nu/doc/images/note.png' alt='' /></span>
+</div><p><strong>Note</strong><br clear='all' />
+</p><div class='indent'><em>There is a shortcut command for creating the chroot environment: <span  style='color: #007a00;'>setup-chroot</span>. This will execute all these steps at once.</em>
+</div><div class='vspace'></div><pre> $ mount --bind /dev /mnt/dev
+ $ mount --bind /tmp /mnt/tmp
+ $ mount --bind /run /mnt/run
+ $ mount -t proc proc /mnt/proc
+ $ mount -t sysfs none /mnt/sys
+ $ mount -t devpts -o noexec,nosuid,gid=tty,mode=0620 devpts /mnt/dev/pts
+ (UEFI only) $ mount --bind /sys/firmware/efi/efivars /mnt/sys/firmware/efi/efivars
+ $ chroot /mnt /bin/bash
+</pre><p class='vspace'>Set the root password. (Not needed if upgrading from a previous CRUX installation)
+</p><pre> $ passwd
+</pre><p class='vspace'><a id='fstabNotes'></a>
+Edit <span  style='color: #007a00;'>/etc/fstab</span> to configure your filesystem(s). Editors <strong>vim</strong> and <strong>nano</strong> are available. The fstab installed by the <strong>setup</strong> script includes the most commonly-used mountpoints (commented out, of course), which can be used as a reference when customizing fstab for your partition scheme.
+</p><div class='indent'><strong>udev</strong> <em>reads files in</em> <span  style='color: #007a00;'>/sys/*</span> <em>and</em> <span  style='color: #007a00;'>/proc/*</span>. <em>Make sure that those pseudo filesystems are enabled in your kernel configuration and available during system-startup. Also note that udev doesn't automatically mount</em> <span  style='color: #007a00;'>/dev/pts</span>. <em>Terminal applications such as</em> <strong>xterm(1)</strong> <em>will not work if you forget to mount it. We highly recommend you check that your <span  style='color: #007a00;'>fstab</span> contains the following line:</em>
+<div class='vspace'></div></div><div class='indent'><pre class='escaped'># dev&gt; mountpoint&gt;         type&gt; options&gt; dump&gt; pass&gt;
+[..]
+devpts  /dev/pts      devpts noexec,nosuid,gid=tty,mode=0620  0      0
+</pre>
+</div><div class='vspace'></div><ul><li>Edit <span  style='color: #007a00;'>/etc/rc.conf</span> to configure font, keyboard, timezone, hostname and services. See Section <a href='#ConfigurationVariables'>"Configuration Variables in /etc/rc.conf"</a> for details about <span  style='color: #007a00;'>/etc/rc.conf</span>.
+</li><li>Generate locales for your system. See section <a href='#LocaleGeneration'>"Generating locales"</a> for more information.
+</li><li>Edit <span  style='color: #007a00;'>/etc/rc.d/net</span>, <span  style='color: #007a00;'>/etc/hosts</span> and <span  style='color: #007a00;'>/etc/resolv.conf</span> to configure your network (ip-address/gateway/hostname/domain/dns).
+</li><li>Go to <span  style='color: #007a00;'>/usr/src/linux-6.12.23</span>, configure and compile a new kernel.
+</li></ul><p class='vspace'><a id='KernelBuildingNotes'></a>
+</p><div class='indent'><span class='lfloat'><img src='http://crux.nu/doc/images/note.png' alt='' /></span>
+</div><p><strong>Note</strong><br clear='all' />
+</p><div class='indent'>Make sure to include drivers needed to bring up your root filesystem! Unless you also create an initramfs with <strong>dracut</strong>, <em>these drivers must be built-in and not kernel modules</em>. Look for sections titled "SCSI disk support", "partition types", and "disk controller" when configuring your kernel. For example:
+</div><ul><li>CONFIG_SATA_AHCI=y
+</li><li>CONFIG_BLK_DEV_SD=y
+</li><li>CONFIG_EXT4_FS=y
+</li></ul><div class='vspace'></div><div class='indent'><span class='lfloat'><img src='https://crux.nu/doc/images/note.png' alt='' /></span>
+</div><p><strong>Note</strong><br clear='all' />
+</p><div class='indent'>The setup program installs a configuration file <span  style='color: #007a00;'>/usr/src/linux-6.12.23/.config</span> which is a good starting point for a custom kernel, because all needed options, like CONFIG_DEVTMPFS, are enabled.
+</div><div class='vspace'></div><pre> $ cd /usr/src/linux-6.12.23
+ $ make mrproper &amp;&amp; make clean
+ $ make menuconfig
+ $ make all
+ $ make modules_install
+ $ cp arch/x86/boot/bzImage /boot/vmlinuz-6.12.23
+ $ cp System.map /boot
+</pre><div class='vspace'></div><div class='indent'><span class='lfloat'><img src='https://crux.nu/doc/images/note.png' alt='' /></span>
+</div><p><strong>Note</strong><br clear='all' />
+</p><div class='indent'>The location <span  style='color: #007a00;'>/boot</span> is the default path that GRUB will search for kernel images. If you use the kernel's EFI stub as your bootloader, then modify the <code>cp</code> commands to copy the kernel into a more appropriate location, e.g., the subdirectory <span  style='color: #007a00;'>EFI/BOOT</span> under the mountpoint of the EFI system partition. The SYSLINUX bootloader on UEFI systems will also require a different location for the saved kernel; see <a href='#SYSLINUX-uefi'>SYSLINUX, in UEFI boot mode</a> for the proper <code>cp</code> commands.
+<div class='vspace'></div></div><div class='indent'><span class='lfloat'><img src='https://crux.nu/doc/images/note.png' alt='' /></span>
+</div><p><strong>Note</strong><br clear='all' />
+</p><div class='indent'>A user-contributed example of a modular kernel configuration has been provided, if you want to boot a
+</div><p>kernel that can tell you the exact set of modules needed for your particular hardware, or if you find it too
+daunting to navigate through the interface of the <code>make menuconfig</code> step. You can find this file, <span  style='color: #007a00;'>config-6.12.23-modular</span>, under <span  style='color: #007a00;'>/crux/kernel/contrib</span> on the installation media.
+</p>
+<p class='vspace'><a id='BootLoader-Setup'></a>
+</p><p><h3>
+<a id='ntoc16'></a>3.2.5. Install a Bootloader</h3><p>
+<p><em>Unless you compiled your kernel to provide an EFI stub and have UEFI boot mode enabled in your BIOS, you will want to install a bootloader on your hard disk.</em> Simple instructions are provided below for four distinct combinations of bootloader and BIOS setting. You are advised to choose <em>one</em> of the following options based on how your BIOS is configured and on how much you value &#8220;do-it-yourself&#8221; config files. The EFI stub option is presented in the <a href='#EFI-stub-install'>Appendix</a>, if you find it simpler to modify EFI variables rather than configuration files.
+</p>
+<div class='vspace'></div><div class='indent'><span class='lfloat'><img src='http://crux.nu/doc/images/note.png' alt='' /></span>
+</div><p><strong>Note</strong><br clear='all' />
+</p><div class='indent'>LILO is no longer maintained in the official ports collections. If you were using LILO to boot CRUX 3.6 or earlier, you are advised to replace the boot sector with GRUB or SYSLINUX when upgrading to CRUX 3.8.
+<div class='vspace'></div></div><div class='indent'><span class='lfloat'><img src='http://crux.nu/doc/images/note.png' alt='' /></span>
+</div><p><strong>Note</strong><br clear='all' />
+</p><div class='indent'>Dual-booting with another operating system is not covered in this handbook. There are more extensive resources for such installations on the <a class='urllink' href='https://wiki.syslinux.org' rel='nofollow'>SYSLINUX wiki</a> or the <a class='urllink' href='https://www.gnu.org/software/grub/manual/grub' rel='nofollow'>GRUB manual</a>.
+</div><p class='vspace'><strong>Option 1: GRUB, in UEFI boot mode:</strong>
+</p><ul><li>Install grub2 into the EFI system partition using a command like <strong>grub-install /boot/efi</strong> (replace <strong>/boot/efi</strong> with the location of the mounted ESP).
+</li><li>If <strong>efibootmgr</strong> was selected during the package selection phase, grub-install will automatically create a boot entry and make it active.
+</li><li>Run <strong>grub-mkconfig &gt; /boot/grub/grub.cfg</strong>, or <a href='#grubcfg-manually'>create a config file by hand</a>.
+</li></ul><p class='vspace'><strong>Option 2: GRUB, in legacy (non-UEFI) boot mode:</strong>
+</p><ul><li>Install grub2 into the Master Boot Record using the command <strong>grub-install /dev/sd??</strong>.
+</li><li>Replace <strong>/dev/sd??</strong> with the actual node of the device whose Master Boot Record you want to overwrite, eg., <strong>/dev/sda</strong> for the first SATA disk.
+</li><li>Run <strong>grub-mkconfig &gt; /boot/grub/grub.cfg</strong>, or  <a href='#grubcfg-manually'>create a config file by hand</a>.
+</li><li><code>grub-mkconfig</code>'s output can be altered by setting variables in a configuration file, <strong>/etc/default/grub</strong>. This file is NOT created by default and is not required, but is useful for customizing the video resolution and grub menu colors without crafting a <strong>grub.cfg</strong> by hand. For more information, see the GRUB manual at <a class='urllink' href='http://www.gnu.org/software/grub/manual/' rel='nofollow'>http://www.gnu.org/software/grub/manual/</a>.
+</li></ul><p class='vspace'><strong>Option 3: SYSLINUX, in UEFI boot mode:</strong>
+</p><ul><li>Copy the bootloader code from <span  style='color: #007a00;'>/usr/share/syslinux</span> to the mounted EFI system partition, specifically the subdirectory <span  style='color: #007a00;'>EFI/BOOT</span>, which most UEFI implementations will search by default. (In this example the ESP is assumed to be mounted at <span  style='color: #007a00;'>/boot/efi</span>)
+</li></ul><div class='vspace'></div><pre> $ mkdir -p /boot/efi/EFI/BOOT
+ $ cd /boot/efi/EFI/BOOT
+ $ cp /usr/src/linux-6.12.23/arch/x86/boot/bzImage vmlinuz-6.12.23
+ $ cp /usr/share/syslinux/efi64/ldlinux.e64 .
+ $ cp /usr/share/syslinux/efi64/syslinux.efi BOOTX64.EFI
+ $ cat &lt;&lt;EOF &gt; syslinux.cfg
+ DEFAULT CRUX-3.8
+ PROMPT 1
+ TIMEOUT 10
+
+ LABEL CRUX-3.8
+   SAY "Now booting into CRUX"
+   KERNEL vmlinuz-6.12.23
+   APPEND root=/dev/sda2 rw quiet
+
+ # End of config file
+ EOF
+</pre><div class='vspace'></div><ul><li>Saving a copy of <span  style='color: #007a00;'>syslinux.efi</span> to the more generic name <span  style='color: #007a00;'>BOOTX64.EFI</span> helps avoid the extra step of customizing boot entries with <code>efibootmgr</code>.
+</li><li>If you choose a different mountpoint for the EFI partition, adjust the <code>mkdir</code> and <code>cd</code> commands accordingly (UEFI itself is completely agnostic about mountpoints specified in <span  style='color: #007a00;'>/etc/fstab).</span>
+</li><li>SYSLINUX interprets relative paths to the kernel in reference to the <span  style='color: #007a00;'>syslinux.cfg</span> file, but cannot cross filesystem boundaries to find the kernel. Therefore the <code>cp</code> command from the <a href='#KernelBuildingNotes'>kernel building step</a> is not applicable when SYSLINUX is installed on the EFI mountpoint <span  style='color: #007a00;'>/boot/efi</span>, and a different target directory appears in the <code>cp</code> commands above.
+</li></ul><p class='vspace'><strong>Option 4: SYSLINUX, in legacy (non-UEFI) boot mode:</strong>
+</p><ul><li>Create a syslinux directory on a vfat or ext2/3/4-formatted partition, and populate it with the kernel and bootloader. <em>Assuming that <span  style='color: #007a00;'>/boot</span> is on a partition marked bootable</em>, you can do:
+</li></ul><div class='vspace'></div><pre> $ mkdir /boot/syslinux
+ $ cd /boot/syslinux
+ $ cp /usr/share/syslinux/ldlinux.c32 .
+ $ extlinux --install /boot/syslinux
+ $ [ -e ../vmlinuz-6.12.23 ] || cp /usr/src/linux-6.12.23/arch/x86/boot/bzImage ../vmlinuz-6.12.23
+ $ cat &lt;&lt;EOF &gt; syslinux.cfg
+ DEFAULT CRUX-3.8
+ PROMPT 1
+ TIMEOUT 10
+
+ LABEL CRUX-3.8
+   SAY "Now booting into CRUX"
+   KERNEL ../vmlinuz-6.12.23
+   APPEND root=/dev/sda2 rw quiet
+
+ # End of config file
+ EOF
+</pre><div class='vspace'></div><ul><li>Replacing <span  style='color: #007a00;'>/boot/syslinux</span> in the above commands with <span  style='color: #007a00;'>/boot/efi/EFI/BOOT</span> will make it easy to toggle between legacy and UEFI boot modes.
+</li><li>SYSLINUX interprets relative paths to the kernel in reference to the <span  style='color: #007a00;'>syslinux.cfg</span> file, although it cannot cross filesystem boundaries to find the kernel. On a legacy system with no dedicated EFI partition, the <code>cp</code> command from the <a href='#KernelBuildingNotes'>kernel building step</a> should put the kernel in a reachable path, hence the <code>cp</code> command above does not need to run if the kernel was already copied to the expected place.
+</li><li>Finally, overwrite the contents of the master boot record (MBR) with the binary blob appropriate for your partition type (<span  style='color: #007a00;'>gptmbr.bin</span> in the case of GPT/GUID partitioning, or <span  style='color: #007a00;'>mbr.bin</span> in the case of DOS partitioning).
+</li></ul><pre class='escaped'>
+ $ PTYPE=$(fdisk -l /dev/sda | grep "^Disklabel type" | cut -d " " -f3)
+ $ [ "$PTYPE" = "gpt" ] &amp;&amp; BINBLOB=gptmbr.bin || BINBLOB=mbr.bin
+ $ dd bs=440 count=1 conv=notrunc if=/usr/share/syslinux/$BINBLOB of=/dev/sda
+</pre>
+<p class='vspace'>More information about UEFI and other boot loader/manager options can be found in the CRUX wiki at <a class='urllink' href='https://crux.nu/Wiki/UEFI' rel='nofollow'>https://crux.nu/Wiki/UEFI</a>.
+</p>
+<p class='vspace'>Remove the CRUX installation media from your computer and reboot from harddisk.
+</p>
+<p class='vspace'><h1>
+<a id='ntoc17'></a>4. Configuration</h1><p>
+<p><h2>
+<a id='ntoc18'></a>4.1. Initialization Scripts</h2><p>
+<p><h3>
+<a id='ntoc19'></a>4.1.1. Runlevels</h3><p>
+<p>The following runlevels are used in CRUX (defined in <span  style='color: #007a00;'>/etc/inittab</span>).
+</p>
+<div class='vspace'></div>
+<table cellpadding='3' rules='all' frame='box' ><tr ><th  align='center'>Runlevel</th><th  align='center'>Description</th></tr>
+<tr ><td  align='left'>0</td><td >Halt</td></tr>
+<tr ><td  align='left'>1 (S)</td><td >Single-user Mode</td></tr>
+<tr ><td  align='left'>2</td><td >Multi-user Mode</td></tr>
+<tr ><td  align='left'>3-5</td><td >(Not used)</td></tr>
+<tr ><td  align='left'>6</td><td >Reboot</td></tr>
+</table>
+<p class='vspace'><h3>
+<a id='ntoc20'></a>4.1.2. Layout</h3><p>
+<p>The initialization scripts used in CRUX follow the BSD-style (as opposed to the SysV-style) and have the following layout.
+</p>
+<div class='vspace'></div>
+<table cellpadding='3' rules='all' frame='box' ><tr ><th  align='center'>File</th><th  align='center'>Description</th></tr>
+<tr ><td  align='left'><span  style='color: #007a00;'>/etc/rc</span></td><td >System boot script</td></tr>
+<tr ><td  align='left'><span  style='color: #007a00;'>/etc/rc.single</span></td><td >Single-user startup script</td></tr>
+<tr ><td  align='left'><span  style='color: #007a00;'>/etc/rc.modules</span></td><td >Module initialization script</td></tr>
+<tr ><td  align='left'><span  style='color: #007a00;'>/etc/rc.multi</span></td><td >Multi-user startup script</td></tr>
+<tr ><td  align='left'><span  style='color: #007a00;'>/etc/rc.local</span></td><td >Local multi-user startup script (empty by default)</td></tr>
+<tr ><td  align='left'><span  style='color: #007a00;'>/etc/rc.shutdown</span></td><td >System shutdown script</td></tr>
+<tr ><td  align='left'><span  style='color: #007a00;'>/etc/rc.conf</span></td><td >System configuration</td></tr>
+<tr ><td  align='left'><span  style='color: #007a00;'>/etc/rc.d/</span></td><td >Service start/stop script directory</td></tr>
+</table>
+<p class='vspace'>Modify <span  style='color: #007a00;'>/etc/rc.modules</span>, <span  style='color: #007a00;'>/etc/rc.local</span> and <span  style='color: #007a00;'>/etc/rc.conf</span> according to your needs.
+</p>
+<p class='vspace'><h3>
+<a id='ntoc21'></a>4.1.3. <a id='ConfigurationVariables'></a> Configuration Variables in /etc/rc.conf</h3><p>
+<p>The following configuration variables are found in <span  style='color: #007a00;'>/etc/rc.conf</span>.
+</p>
+<div class='vspace'></div>
+<table cellpadding='3' rules='all' frame='box' ><tr><td align='center'  valign='top'><strong>Variable</strong>
+</td><td align='center'  valign='top'><strong>Description</strong>
+</td></tr><tr><td valign='center' >FONT
+</td><td  valign='top'>
+<p>Specifies which console font to load at system startup. The contents of this variable will be passed as argument to <strong>setfont(1)</strong>. The available fonts are located in <span  style='color: #007a00;'>/usr/share/kbd/consolefonts/</span>.
+</p>
+<p class='vspace'><span style='font-size: 83%;'>Example:</span> <code>FONT=default</code>
+</p></td></tr><tr><td valign='center' >KEYMAP	
+</td><td  valign='top'>
+<p>Specifies which console keyboard map to load at system startup. The contents of this variable will be passed as argument to <strong>loadkeys(1)</strong>. The available keyboard maps are located in <span  style='color: #007a00;'>/usr/share/kbd/keymaps/</span>.
+</p>
+<p class='vspace'><span style='font-size: 83%;'>Example:</span> <code>KEYMAP=sv-latin1</code>
+</p></td></tr><tr><td valign='center' >TIMEZONE	
+</td><td  valign='top'>
+<p>Specifies the timezone used by the system. The available zone description files are located in <span  style='color: #007a00;'>/usr/share/zoneinfo/</span>.
+</p>
+<p class='vspace'><span style='font-size: 83%;'>Example:</span> <code>TIMEZONE=Europe/Stockholm</code>
+</p></td></tr><tr><td valign='center' >HOSTNAME
+</td><td  valign='top'>
+<p>Specifies the hostname.
+</p>
+<p class='vspace'><span style='font-size: 83%;'>Example:</span> <code>HOSTNAME=pluto</code>
+</p></td></tr><tr><td valign='center' >SYSLOG
+</td><td  valign='top'>
+<p>Specifies the system logging daemon(s) to run at startup.
+</p>
+<p class='vspace'><span style='font-size: 83%;'>Example:</span> <code>SYSLOG=sysklogd</code>
+</p></td></tr><tr><td valign='center' >SERVICES	
+</td><td  valign='top'>
+<p>Specifies which services to start at system startup. The services specified in this array must have a matching start/stop script in <span  style='color: #007a00;'>/etc/rc.d/</span>. When entering multi-user mode the specified scripts will be called in the specified order with the argument <strong>start</strong>. At system shutdown or when entering single-user mode these scripts will be called in the reverse order with the argument <strong>stop</strong>.
+</p>
+<p class='vspace'><span style='font-size: 83%;'>Example:</span> <code>SERVICES=(crond lo net sshd)</code>
+</p></td></tr><tr><td valign='center' >BLANKTIME	
+</td><td  valign='top'>
+<p>Sets the interval of inactivity, in minutes, after which the screen will be automatically blanked. Defaults to 15 minutes.
+</p>
+<p class='vspace'><span style='font-size: 83%;'>Example:</span> <code>BLANKTIME=15</code>
+</p></td></tr><tr><td valign='center' >USE_COLOR	
+</td><td  valign='top'>
+<p>Can be set to true to print colored highlights. Defaults to false.
+</p>
+<p class='vspace'><span style='font-size: 83%;'>Example:</span> <code>USE_COLOR=true</code>
+</p></td></tr><tr><td valign='center' >VERBOSE	
+</td><td  valign='top'>
+<p>Will print more verbose output of the rc process. Defaults to false.
+</p>
+<p class='vspace'><span style='font-size: 83%;'>Example:</span> <code>VERBOSE=true</code>
+</p></td></tr></table>
+<p class='vspace'><h2>
+<a id='ntoc22'></a>4.2. <a id='LocaleGeneration'></a> Generating locales</h2><p>
+<p>Starting with CRUX 2.5, glibc does not contain all possible locales anymore, thus you'll have to generate the locales you need/use. To ensure proper operation of <strong>pkgmk</strong>, the locale C.UTF-8 is generated as part of the CRUX installation. Any other desired locales must be created by the administrator.
+</p>
+<p class='vspace'>The core port glibc provides a script to generate the desired locales based on the configuration file <span  style='color: #007a00;'>/etc/locale.gen</span>, so you no longer need to run <strong>localedef</strong> manually. Just open <span  style='color: #007a00;'>/etc/locale.gen</span> in an editor and uncomment the desired locales, then run <strong>/usr/sbin/locale-gen</strong>. With the appropriate UPGRADE directives in <span  style='color: #007a00;'>/etc/pkgadd.conf</span>, you can safely upgrade glibc at a later date without losing your chosen locales; just make sure that the file <span  style='color: #007a00;'>/etc/locale.gen</span> is protected from being overwritten when performing <strong>pkgadd -u</strong>.
+</p>
+<p class='vspace'><h2>
+<a id='ntoc23'></a>4.3. Network Configuration</h2><p>
+<p>The network configuration is found in the service script <span  style='color: #007a00;'>/etc/rc.d/net</span>. To enable this service you need to add net to the SERVICES array in <span  style='color: #007a00;'>/etc/rc.conf</span>. By default this service script configures a dynamic IP address. <br />Example:
+</p>
+<div class='vspace'></div><pre class='escaped'>
+#!/bin/sh
+#
+# /etc/rc.d/net: start/stop network interface
+#
+
+# Connection type: "DHCP" or "static"
+TYPE="DHCP"
+
+# For "static" connections, specify your settings here:
+# To see your available devices run "ip link".
+DEV=enp11s0
+ADDR=192.168.1.100
+MASK=24
+GW=192.168.1.1
+
+# Optional settings:
+DHCPOPTS="-h `/bin/hostname` -t 10"
+
+case $1 in
+        start)
+                if [ "${TYPE}" = "DHCP" ]; then
+                        /sbin/dhcpcd ${DHCPOPTS}
+                else
+                        /sbin/ip addr add ${ADDR}/${MASK} dev ${DEV} broadcast +
+                        /sbin/ip link set ${DEV} up
+                        /sbin/ip route add default via ${GW}
+                fi
+                ;;
+        stop)
+                if [ "${TYPE}" = "DHCP" ]; then
+                        /sbin/dhcpcd -x
+                else
+                        /sbin/ip route del default
+                        /sbin/ip link set ${DEV} down
+                        /sbin/ip addr del ${ADDR}/${MASK} dev ${DEV}
+                fi
+                ;;
+        restart)
+                $0 stop
+                $0 start
+                ;;
+        *)
+                echo "Usage: $0 [start|stop|restart]"
+                ;;
+esac
+
+# End of file
+</pre>
+<p class='vspace'>If you want to configure your system to use a static IP address, specify TYPE=static and the correct interface. You will also need to configure DNS settings in /etc/resolv.conf. <br />Example:
+</p>
+<div class='vspace'></div><pre class='escaped'>
+#!/bin/sh
+#
+# /etc/rc.d/net: start/stop network interface
+#
+
+# Connection type: "DHCP" or "static"
+TYPE="static"
+
+# For "static" connections, specify your settings here:
+# To see your available devices run "ip link".
+DEV=enp11s0
+ADDR=192.168.1.100
+MASK=24
+GW=192.168.1.1
+
+# Optional settings:
+DHCPOPTS="-h `/bin/hostname` -t 10"
+
+case $1 in
+        start)
+                if [ "${TYPE}" == "DHCP" ]; then
+                        /sbin/dhcpcd ${DHCPOPTS}
+                else
+                        /sbin/ip addr add ${ADDR}/${MASK} dev ${DEV} broadcast +
+                        /sbin/ip link set ${DEV} up
+                        /sbin/ip route add default via ${GW}
+                fi
+                ;;
+        stop)
+                if [ "${TYPE}" == "DHCP" ]; then
+                        /sbin/dhcpcd -x
+                else
+                        /sbin/ip route del default
+                        /sbin/ip link set ${DEV} down
+                        /sbin/ip addr del ${ADDR}/${MASK} dev ${DEV}
+                fi
+                ;;
+        restart)
+                $0 stop
+                $0 start
+                ;;
+        *)
+                echo "Usage: $0 [start|stop|restart]"
+                ;;
+esac
+
+# End of file
+</pre>
+<div class='vspace'></div><pre class='escaped'>
+#
+# /etc/resolv.conf: resolver configuration file
+#
+
+search your internal domain&gt;
+nameserver your DNS server&gt;
+
+# End of file
+</pre>
+<p class='vspace'>To associate with a WPA2-protected wireless network, you should first create a configuration file for <span  style='color: #007a00;'>wpa_supplicant</span> to use, then launch wpa_supplicant on that interface.
+</p>
+<div class='vspace'></div><pre> $ wpa_passphrase MYNETWORK MYPASS &gt; /etc/wpa_supplicant-wlan0.conf
+ $ wpa_supplicant -i wlan0 -c /etc/wpa_supplicant-wlan0.conf
+</pre><div class='vspace'></div><div class='indent'>Replace <span  style='color: #007a00;'>MYNETWORK</span> with the ssid of your network, <span  style='color: #007a00;'>MYPASS</span> with its passphrase, and <span  style='color: #007a00;'>wlan0</span> with the name of your actual network interface. Run <code>ip link</code> to see the list of all available interfaces.
+</div><p class='vspace'>If the <span  style='color: #007a00;'>wpa_supplicant</span> output indicates a successful authentication, you can background the process and run <code>dhcpcd wlan0</code> to request an address from the DHCP server.
+</p>
+<p class='vspace'>The <strong>wpa_supplicant</strong> package provides two startup scripts in <span  style='color: #007a00;'>/etc/rc.d</span>. You might choose to put <span  style='color: #007a00;'>wlan</span> in the SERVICES array of <span  style='color: #007a00;'>/etc/rc.conf</span> (replacing <span  style='color: #007a00;'>net</span>), which will let <strong>wpa_supplicant</strong> manage all your network interfaces. Another option is to let the <span  style='color: #007a00;'>net</span> startup script call <strong>wpa_supplicant</strong> as needed, by copying into <span  style='color: #007a00;'>/lib/dhcpcd/dhcpcd-hooks/</span> the example file <span  style='color: #007a00;'>/usr/share/dhcpcd/hooks/10-wpa_supplicant</span>.
+</p>
+<p class='vspace'><h2>
+<a id='ntoc24'></a>4.4. Passwords and User Environment</h2><p>
+<p>CRUX uses SHA512 passwords by default. To change the password encryption method set the ENCRYPT_METHOD variable in <span  style='color: #007a00;'>/etc/login.defs</span> to DES, MD5 or SHA256.
+</p>
+<p class='vspace'>Furthermore, when compiling programs that use the <code>crypt(3)</code> function to authenticate users you should make sure that these programs are linked against the <span  style='color: #007a00;'>libcrypt</span> library (i.e. use <strong>-lcrypt</strong> when linking) which contains the SHA512 version of the crypt function (this version is backwards compatible and understands DES passwords as well).
+</p>
+<p class='vspace'>Also configurable in <span  style='color: #007a00;'>/etc/login.defs</span> are the settings that govern how <code>useradd(8)</code> behaves when you create a new non-root user, such as CREATE_HOME and USERGROUPS_ENAB. First-time CRUX administrators might be surprised to learn that creating a new user via <code>useradd -m</code> will not automatically populate the home directory with a basic shell startup file, as happens on other Linux distributions whose <span  style='color: #007a00;'>/etc/skel/</span> contains their idea of an initial home directory.
+</p>
+<p class='vspace'>Since CRUX 3.7, shells that rely on <span  style='color: #007a00;'>/etc/profile</span> to set PATH will all assign the same value to this variable regardless of UID. This change allows non-root users easy access to any administrative command without having to type its full path (provided they use <strong>bash</strong> as their shell and are given the appropriate <strong>doas/sudo</strong> permissions). Users are always free to choose a different shell and manage PATH themselves, but the default behaviour is now less likely to cause confusion.
+</p>
+<p class='vspace'>The core packages <strong>linux-pam</strong> and <strong>dumb_runtime_dir</strong>, provide a variety of modules that can be loaded upon logging in. The files in <span  style='color: #007a00;'>/etc/pam.d</span> govern the association between the type of login (eg., tty, SSH, su, X Display Manager) and the modules that get loaded (eg., pam_env, pam_exec, pam_limits). Some typical situations that can be handled cleanly with PAM modules are listed in the table below.
+</p>
+<div class='vspace'></div>
+<table cellpadding='3' rules='all' frame='box' ><tr><td align='center'  valign='top'><strong>file in /etc/pam.d</strong>
+</td><td align='center'  valign='top'><strong>Typical usage</strong>
+<div class='vspace'></div></td></tr><tr><td  valign='top'><span  style='color: #007a00;'>pam_dumb_runtime_dir.so</span>
+</td><td  valign='top'>
+<p>create an XDG_RUNTIME_DIR for applications that conform to the freedesktop.org specification
+</p></td></tr><tr><td  valign='top'><span  style='color: #007a00;'>pam_env.so</span>
+</td><td  valign='top'>
+<p>export some common environment variables, no matter what login shell the user has chosen
+</p></td></tr><tr><td  valign='top'><span  style='color: #007a00;'>pam_limits.so</span>
+</td><td  valign='top'>
+<p>increase the allowed number of opened files, to ensure proper operation of some games
+</p></td></tr><tr><td  valign='top'><span  style='color: #007a00;'>pam_xauth.so</span>
+</td><td  valign='top'>
+<p>grant another user access to the X display of the logged-in user, so that programs invoked with <em>su</em> can work properly
+</p></td></tr><tr><td  valign='top'><span  style='color: #007a00;'>pam_mount.so</span>
+</td><td  valign='top'>
+<p>automatically mount a LUKS-encrypted home partition after successful authentication
+</p></td></tr></table>
+<div class='vspace'></div><div class='indent'><span class='lfloat'> <img src='http://crux.nu/doc/images/note.png' alt='' /></span>
+</div><p><strong>Note</strong><br clear='all' />
+</p><div class='indent'>The existence of a writable XDG_RUNTIME_DIR is required for proper operation of many desktop applications. A clean CRUX 3.8 installation will place a line in <span  style='color: #007a00;'>/etc/pam.d/common-session</span> that loads the module <span  style='color: #007a00;'>pam_dumb_runtime_dir.so</span> to satisfy this requirement.
+</div><p class='vspace'>If you find yourself in one of the situations in the table above, read the man page for the corresponding PAM module to learn how to accomplish the desired configuration.
+</p>
+<p class='vspace'><h2>
+<a id='ntoc25'></a>4.5. Upgrading the Kernel</h2><p>
+<p>The kernel source, which is found in <span  style='color: #007a00;'>/usr/src/linux-6.12.23/</span> is not installed using <strong>pkgadd</strong>. If you decide to upgrade your kernel you can safely do so by manually replacing the kernel source with a newer version (or unpack the newer source tree somewhere else). This will not make the package database inconsistent (since it's not installed with <strong>pkgadd</strong>) nor will it affect the kernel headers found in <span  style='color: #007a00;'>/usr/include/linux</span> and <span  style='color: #007a00;'>/usr/include/asm</span> since these are not symlinks to the kernel source, but instead contain copies of the headers.
+</p>
+<p class='vspace'><h1>
+<a id='ntoc26'></a>5. The Package System</h1><p>
+<p><h2>
+<a id='ntoc27'></a>5.1. Introduction</h2><p>
+<p>The package system (<a class='urllink' href='http://crux.nu/Wiki/FaqPkgUtils' rel='nofollow'>pkgutils</a>) is made with simplicity in mind, where all packages are plain <span  style='color: #007a00;'>tar.gz files</span> (i.e. without any kind of meta data). As a first-time CRUX user,
+you might have noticed package filenames appearing in the progress report of the <strong>setup</strong> script during installation. These packages were provided on the ISO, but soon you'll be building packages yourself.
+</p>
+<p class='vspace'>Packages follow the naming convention <span  style='color: #007a00;'><em>&lt;name&gt;#&lt;version&gt;-&lt;release&gt;</em>.pkg.tar.gz</span>, where <span  style='color: #007a00;'>&lt;name&gt;</span> is the name of the program, <span  style='color: #007a00;'>&lt;version&gt;</span> is the version number of the program, and <span  style='color: #007a00;'>&lt;release&gt;</span> is the version number of the package. <br />The <span  style='color: #007a00;'>pkg.tar.gz</span> extension is used (instead of just <span  style='color: #007a00;'>tar.gz</span>) to indicate that this is not just any <span  style='color: #007a00;'>tar.gz</span> file, but a <span  style='color: #007a00;'>tar.gz</span> that is meant to be installed using <strong>pkgadd</strong>. This helps distinguish packages from other <span  style='color: #007a00;'>tar.gz</span> files. Note that pkgmk nowadays supports additional compression schemes like bzip2, lzip, xz, and zstd (with the extensions <span  style='color: #007a00;'>tar.bz2, tar.lz, tar.xz, tar.zst</span> respectively).
+</p>
+<p class='vspace'><strong>pkgadd(8)</strong>, <strong>pkgrm(8)</strong>, <strong>pkginfo(8)</strong>, and <strong>pkgmk(8)</strong> are the package management utilities. With these utilities you can install, uninstall, inspect, make packages, or query the package database.
+</p>
+<p class='vspace'>When a package is installed using <strong>pkgadd</strong> a new record is added to the package database (stored in <span  style='color: #007a00;'>/var/lib/pkg/db</span>). The basic package system does not have any kind of dependency checking, thus it will not warn you if you try to build a package that requires libraries or headers from other packages. Your mistake will only be revealed when the pkgmk build function exits with errors. The included <strong>prt-get</strong> tool, however, can be told to resolve dependencies, if called with <strong>prt-get depinst</strong> rather than simply <strong>prt-get install</strong>.
+</p>
+<p class='vspace'>The following sections will in describe in short how to use the package utilities. Additional information about these utilities can be found on their respective man pages.
+</p>
+<p class='vspace'><h2>
+<a id='ntoc28'></a>5.2. Using the Package System</h2><p>
+<p><h3>
+<a id='ntoc29'></a>5.2.1. Installing a Package</h3><p>
+<p>Installing a package is done by using <strong>pkgadd</strong>. This utility requires at least one argument, the package you want to install. Example:
+</p>
+<div class='vspace'></div><pre> $ pkgadd bash#5.2.37-1.pkg.tar.gz
+</pre><p class='vspace'>When installing a package the package manager will ensure that no existing files are overwritten. If conflicts are found, an error message will be printed and <strong>pkgadd</strong> will abort without installing the package. The error message will contain the names of the conflicting files. Example:
+</p>
+<div class='vspace'></div><pre> $ pkgadd bash#5.2.37-1.pkg.tar.gz
+ bin/sh
+ usr/man/man1/sh.1.gz
+ pkgadd error: listed file(s) already installed (use -f to ignore and overwrite)
+</pre><div class='vspace'></div><div class='indent'>No such error message is issued for already-existing directories, since the package database allows a directory to be associated with more than one package. However, the owner/group and permissions of an existing directory will not be changed to match those of the requested package.
+</div><p class='vspace'>To force the installation when conflicting files are reported, you can use the option <strong>-f</strong> (or <strong>--force</strong>). Example:
+</p>
+<div class='vspace'></div><pre> $ pkgadd -f bash#5.2.37-1.pkg.tar.gz
+</pre><p class='vspace'>The package system allows a file to be owned by exactly one package. When forcing an installation the ownership of the conflicting files will be transferred to the package that is currently being installed.
+</p>
+<div class='vspace'></div><div class='indent'><span class='lfloat'><img src='https://crux.nu/doc/images/warning.png' alt='' /></span>
+</div><p><strong>Warning</strong><br clear='all' />
+</p><div class='indent'><em>It is often not a good idea to force the installation unless you really know what you are doing. If a package conflicts with already installed files it could be a sign that the package is broken and installs unexpected files. Use this option with extreme care, preferably not at all.</em>
+</div><p class='vspace'>As stated earlier, the package file itself does not contain any meta data. Instead, the package manager uses the package filename to determine the package name and version. Thus, when installing a package file named <span  style='color: #007a00;'>bash#5.2.37-1.pkg.tar.gz</span>, the package manager will interpret this as a package named <span  style='color: #007a00;'>bash</span> at version <span  style='color: #007a00;'>5.2.37-1</span>. If <strong>pkgadd</strong> is unable to interpret the filename (e.g. # is missing or the filename does not end with <span  style='color: #007a00;'>.pkg.tar.gz</span>) an error message will be printed and pkgadd will abort without installing the package.
+</p>
+<p class='vspace'><h3>
+<a id='ntoc30'></a>5.2.2. <a id='UpgradingaPackage'></a> Upgrading a Package</h3><p>
+<p>Upgrading a package is done using <strong>pkgadd</strong> with the <strong>-u option</strong>. Example:
+</p>
+<div class='vspace'></div><pre> $ pkgadd -u bash#5.2.37-1.pkg.tar.gz
+</pre><p class='vspace'>This will replace the previously installed <span  style='color: #007a00;'>bash</span> package with the new one. If you have not previously installed <span  style='color: #007a00;'>bash</span>, <strong>pkgadd</strong> will print an error message. The package system does not care about the version number of the
+package in that you can &#8220;upgrade&#8221; version 5.2.37-1 with version 5.2.35-1 (or even with version 5.2.37-1 itself). The installed package will be replaced with the specified package.
+</p>
+<p class='vspace'>Upgrading a package is not simply a wrapper for <strong>pkgrm</strong> followed by <strong>pkgadd</strong>, because you usually want to preserve your customizations of the config and log files that are owned by the already-installed package. Therefore, <strong>pkgadd -u</strong> conducts some upgrade-specific checks of the filesystem and the package database to construct what is called a &#8220;keep list&#8221; (in addition to the &#8220;non-install list&#8221; which is initialized for every <strong>pkgadd</strong> transaction). The construction of both lists is governed by the file <span  style='color: #007a00;'>/etc/pkgadd.conf</span>.
+</p>
+<p class='vspace'><span  style='color: #007a00;'>/etc/pkgadd.conf</span> can contain rules describing how <strong>pkgadd</strong> should behave when installing or upgrading any package. A rule is built out of three fragments; <em>event</em>, <em>pattern</em> and <em>action</em>. The event names the kind of operation (INSTALL or UPGRADE) to which this rule will be applied. The <em>pattern</em> is a filename pattern expressed as a regular expression and the
+action applicable to the INSTALL or UPGRADE <em>event</em> is YES or NO. More than one rule of the same event type is allowed, in which case the first rule will have the lowest priority and the last rule will have the highest priority. <br />Example:
+</p>
+<div class='vspace'></div><pre class='escaped'>
+ # 
+ # /etc/pkgadd.conf: pkgadd(8) configuration
+ #
+
+ UPGRADE         ^etc/.*$                NO
+ UPGRADE         ^var/log/.*$            NO
+ UPGRADE         ^etc/X11/.*$            YES
+ UPGRADE         ^etc/X11/xorg.conf$     NO
+
+ # End of file
+</pre>
+<p class='vspace'>The above example will cause <strong>pkgadd</strong> to never upgrade anything in <span  style='color: #007a00;'>/etc/</span> or <span  style='color: #007a00;'>/var/log/</span> (subdirectories included), except files in <span  style='color: #007a00;'>/etc/X11/</span> (subdirectories included), unless it is the file fn%/etc/X11/xorg.conf. The default rule is to install and upgrade everything, rules in this file are exceptions to that rule.
+</p>
+<div class='vspace'></div><div class='indent'><span class='lfloat'><img src='https://crux.nu/doc/images/note.png' alt='' /></span>
+</div><p><strong>Note</strong><br clear='all' />
+</p><div class='indent'><em>A pattern should never contain an initial &#8220;/&#8221; since you are referring to the files in the package, not the files on the disk.</em>
+</div><p class='vspace'>If <strong>pkgadd</strong> finds that a specific file should not be upgraded, it will install it under <span  style='color: #007a00;'>/var/lib/pkg/rejected/</span>. Files in this directory are never added to the package database. The user is then free to examine, use and/or remove that file manually. Another option is to use <strong>rejmerge</strong>. For each rejected file found in <span  style='color: #007a00;'>/var/lib/pkg/rejected/</span>, rejmerge will display the
+difference between the installed version and the rejected version. The user can then choose to keep the installed version, upgrade to the rejected version or perform a merge of the two. Example (using the above <span  style='color: #007a00;'>/etc/pkgadd.conf</span>):
+</p>
+<div class='vspace'></div><pre class='escaped'>
+ $ pkgadd -u ports#1.6-4.pkg.tar.gz
+ pkgadd: rejecting etc/ports/compat-32.pub, keeping existing version
+ pkgadd: rejecting etc/ports/compat-32.rsync.inactive, keeping existing version
+ pkgadd: rejecting etc/ports/contrib.pub, keeping existing version
+ pkgadd: rejecting etc/ports/contrib.rsync.inactive, keeping existing version
+ pkgadd: rejecting etc/ports/core.pub, keeping existing version
+ pkgadd: rejecting etc/ports/core.rsync, keeping existing version
+ pkgadd: rejecting etc/ports/opt.pub, keeping existing version
+ pkgadd: rejecting etc/ports/opt.rsync, keeping existing version
+ pkgadd: rejecting etc/ports/xorg.pub, keeping existing version
+ pkgadd: rejecting etc/ports/xorg.rsync, keeping existing version
+
+ $ tree -L 3 /var/lib/pkg/rejected/
+ /var/lib/pkg/rejected
+   etc
+      ports
+         compat-32.pub
+         compat-32.rsync.inactive
+         contrib.pub
+         contrib.rsync.inactive
+         core.pub
+         core.rsync
+         drivers
+         opt.pub
+         opt.rsync
+         xorg.pub
+         xorg.rsync
+</pre>
+<p class='vspace'>If this <span  style='color: #007a00;'>pkgadd.conf</span> had been in place during an upgrade from CRUX 3.7 to 3.8, and you neglected to check the contents of <span  style='color: #007a00;'>/var/lib/pkg/rejected/</span> (either manually or by running <code>rejmerge</code>), then <strong>ports -u</strong> would synchronize your ports tree with the older branch! Hence you should always pay attention to warnings and errors reported by <code>pkgadd</code>.
+</p>
+<p class='vspace'><h3>
+<a id='ntoc31'></a>5.2.3. Removing a Package</h3><p>
+<p>Removing a package is done by using <strong>pkgrm</strong>. This utility requires one argument, the name of the package you want to remove. Example:
+</p>
+<div class='vspace'></div><pre> $ pkgrm bash
+</pre><div class='vspace'></div><div class='indent'><span class='lfloat'><img src='https://crux.nu/doc/images/warning.png' alt='' /></span>
+</div><p><strong>Warning</strong><br clear='all' />
+</p><div class='indent'><em>This will remove all files owned by the package, no questions asked. Think twice before doing it and make sure that you did not misspell the package name since that could remove something completely different (e.g. think about what could happen if you misspelled <span  style='color: #007a00;'>glib</span> as <span  style='color: #007a00;'>glibc</span>).</em>
+</div><p class='vspace'><h3>
+<a id='ntoc32'></a>5.2.4. Querying the Package Database</h3><p>
+<p>Querying the package database is done using <strong>pkginfo</strong>. This utility has a few options to answer different queries.
+</p>
+<div class='vspace'></div>
+<table cellpadding='3' rules='all' frame='box' ><tr ><th  align='center'>Option</th><th  align='center'>Description</th></tr>
+<tr ><td  align='left'>-i, --installed</td><td >List installed packages and their version.</td></tr>
+<tr ><td  align='left'>-o, --owner pattern</td><td >List owner(s) of file(s) matching pattern.</td></tr>
+<tr ><td  align='left'>-l, --list package|file</td><td >List files owned by the specified package or contained in file</td></tr>
+<tr ><td  align='left'>-f &lt;package&gt;</td><td >Display the footprint of the given package. Basically the same as -l &lt;package&gt; but with owner/group and permissions.</td></tr>
+</table>
+<p class='vspace'>Examples:
+</p>
+<div class='vspace'></div><pre class='escaped'>
+ $ pkginfo -i
+ acl 2.3.2-1
+ alsa-lib 1.2.13-1
+ alsa-utils 1.2.13-1
+ ...&gt;
+ zip 3.0-2
+ zlib 1.3.1-1
+ zstd 1.5.6-1
+</pre>
+<div class='vspace'></div><pre class='escaped'>
+ $ pkginfo -l bash
+ bin/
+ bin/bash
+ bin/sh
+ etc/
+ etc/profile
+ usr/
+ usr/man/
+ usr/man/man1/
+ usr/man/man1/bash.1.gz
+ usr/man/man1/sh.1.gz
+</pre>
+<div class='vspace'></div><pre class='escaped'>
+ $ pkginfo -l grep#3.11-1.pkg.tar.gz
+ usr/
+ usr/bin/
+ usr/bin/egrep
+ usr/bin/fgrep
+ usr/bin/grep
+ usr/man/
+ usr/man/man1/
+ usr/man/man1/egrep.1.gz
+ usr/man/man1/fgrep.1.gz
+ usr/man/man1/grep.1.gz
+</pre>
+<div class='vspace'></div><pre class='escaped'>
+ $ pkginfo -o bin/ls
+ e2fsprogs  usr/bin/lsattr
+ fileutils  bin/ls
+ modutils   sbin/lsmod
+</pre>
+<p class='vspace'><h2>
+<a id='ntoc33'></a>5.3. Creating Packages</h2><p>
+<p>Creating a package is done using <strong>pkgmk</strong>. This utility uses a file called <span  style='color: #007a00;'>Pkgfile</span>, which contains information about the package (such as name, version, etc) and the commands that should be executed in order to compile the package in question.
+</p>
+<p class='vspace'>To be more specific, the <span  style='color: #007a00;'>Pkgfile</span> file is actually a <strong>bash(1)</strong> script, which defines a number of variables (name, version, release and source) and a function (build). Below is an example of what a <span  style='color: #007a00;'>Pkgfile</span> file might look like. The example shows how to package the <strong>grep(1) utility</strong>. Some comments are inserted for explanation.
+</p>
+<div class='vspace'></div><pre class='escaped'>
+# Specify the name of the package.
+name=grep
+
+# Specify the version of the package.
+version=3.11
+
+# Specify the package release.
+release=1
+
+# The source(s) used to build this package.
+source=(ftp://ftp.ibiblio.org/pub/gnu/$name/$name-$version.tar.gz)
+
+# The build() function below will be called by pkgmk when
+# the listed source files have been unpacked.
+build() {
+   # The first thing we do is to cd into the source directory.
+   cd $name-$version
+
+   # Run the configure script with desired arguments.
+   # In this case we want to put grep under /usr/bin and
+   # disable national language support.
+   ./configure --prefix=/usr --disable-nls
+
+   # Compile.
+   make
+
+   # Install the files, BUT do not install it under /usr, instead
+   # we redirect all the files to $PKG/usr by setting the DESTDIR
+   # variable. The $PKG variable points to a temporary directory
+   # which will later be made into a tar.gz-file. Note that the
+   # DESTDIR variable is not used by all Makefiles, some use prefix
+   # and others use ROOT, etc. You have to inspect the Makefile in
+   # question to find out. Some Makefiles do not support redirection
+   # at all. In those cases you will have to create a patch for it.
+   make DESTDIR=$PKG install
+
+   # Remove unwanted files, in this case the info-pages.
+   rm -rf $PKG/usr/info
+}
+</pre>
+<p class='vspace'>In reality you do not include all those comments, thus the real <span  style='color: #007a00;'>Pkgfile</span> for <strong>grep(1)</strong> looks like this:
+</p>
+<div class='vspace'></div><pre class='escaped'>
+# Description: GNU grep, egrep and fgrep
+# URL:         http://www.gnu.org/software/grep/grep.html
+# Maintainer:  Per Lid&amp;#65533;n, per at fukt dot bth dot se
+
+name=grep
+version=3.11
+release=1
+source=(ftp://ftp.ibiblio.org/pub/gnu/$name/$name-$version.tar.gz)
+
+build() {
+  cd $name-$version
+  ./configure --prefix=/usr --disable-nls
+  make
+  make DESTDIR=$PKG install
+  rm -rf $PKG/usr/info
+}
+</pre>
+<div class='vspace'></div><div class='indent'><span class='lfloat'><img src='http://crux.nu/doc/images/note.png' alt='' /></span>
+</div><p><strong>Note</strong><br clear='all' />
+</p><div class='indent'><em>The build() function in the example above is just an example of how <strong>grep</strong> is built. The contents of the function can differ significantly if the program is built in some other way, e.g. does not use <strong>autoconf</strong>.</em>
+</div><p class='vspace'>When the build() function has been executed, the <span  style='color: #007a00;'>$PKG</span> directory will be made into a package named <span  style='color: #007a00;'><em>&lt;name&gt;#&lt;version&gt;-&lt;release&gt;</em>.pkg.tar.gz</span>. Before the package creation is completed, <strong>pkgmk</strong> will check the contents of the
+package against the <span  style='color: #007a00;'>.footprint</span> file. If this file does not exist, it will be created and the test will be skipped. The <span  style='color: #007a00;'>.footprint</span> file will contain a list of all files that should be in the package if the build was successful or a list of all the files that were installed in <span  style='color: #007a00;'>$PKG</span> (if the <span  style='color: #007a00;'>.footprint</span> did not already exist). If there is a mismatch the test will fail and an error message will be printed. You should not write the <span  style='color: #007a00;'>.footprint</span> file by hand. Instead, when a package has been upgraded and you need to update the contents of the <span  style='color: #007a00;'>.footprint</span> file you simply do <strong>pkgmk -uf</strong>. This test ensures that a rebuild of the package turned out as expected.
+</p>
+<p class='vspace'>If the package built without errors it's time to install it by using <strong>pkgadd</strong> and try it out. I highly recommend looking at the <span  style='color: #007a00;'>Pkgfile</span> in another package(s), since looking at examples is a great way to learn.
+</p>
+<div class='vspace'></div><div class='indent'><span class='lfloat'><img src='https://crux.nu/doc/images/note.png' alt='' /></span>
+</div><p><strong>Note</strong><br clear='all' />
+</p><div class='indent'><em>Please see the <span  style='color: #007a00;'>Pkgfile(5)</span> man-page for additional guidelines regarding Pkgfile variables (name, version, release, build) and the footprint.</em>
+</div><p class='vspace'><h2>
+<a id='ntoc34'></a>5.4. Adjusting/Configuring the Package Build Process</h2><p>
+<p>Many settings pertaining to the package build process can be adjusted by editing the <strong>pkgmk(8)</strong> configuration file <strong>/etc/pkgmk.conf</strong>. Some of these configurable settings include:
+</p><ul><li>CFLAGS, CXXFLAGS - these settings control optimization and architecture options for package compiles. <strong>It is best NOT to change these unless you absolutely know what you're doing!</strong>
+</li><li>PKGMK_SOURCE_MIRRORS - this setting defines locations from which pkgmk will attempt to fetch source archives. If this array only contains mirrors administered by the CRUX team, building a port from your personal collection might result in <em>404 Not Found</em> errors until all the mirrors are exhausted, and then the source defined in the Pkgfile will be tried.
+</li><li>PKGMK_SOURCE_DIR - this setting defines where pkgmk will store (if downloading) and use source archives when building
+</li><li>PKGMK_PACKAGE_DIR - this setting defines where pkgmk will create package files once the build process is complete
+</li><li>PKGMK_WORK_DIR - this setting defines a work area pkgmk will use to build the package
+</li></ul><p class='vspace'>Here are some examples:
+</p>
+<div class='vspace'></div><pre class='escaped'>
+PKGMK_SOURCE_MIRRORS=(http://fileserver.intranet/crux/sources/)
+</pre>
+<p class='vspace'>This setting instructs pkgmk to attempt to fetch all source archives from http://fileserver.intranet/crux/sources/ before falling back to the source URL specified in the Pkgfile. Multiple URLS can be separated by spaces.
+</p>
+<div class='vspace'></div><pre class='escaped'>
+PKGMK_SOURCE_DIR="/usr/ports/srcfiles"
+</pre>
+<p class='vspace'>This example instructs pkgmk to store and find source archives in /usr/ports/srcfiles. An example benefit of this setup would be the ability to store /usr/ports/srcfiles on an NFS server on your local network for use by multiple crux installations. (PKGMK_PACKAGE_DIR can be set and used the same way. But if NFS is too challenging to set up on your local network and you find it easier to configure an http server instead, <span  style='color: #007a00;'>pkg-get</span> from the <span  style='color: #007a00;'>opt</span> collection gives you an alternative mechanism for sharing built packages.)
+</p>
+<div class='vspace'></div><pre class='escaped'>
+PKGMK_WORK_DIR="/usr/ports/work/$name"
+</pre>
+<p class='vspace'>This example instructs pkgmk to use /usr/ports/work/$name as a work area for building the specified package. Building the <strong>grep</strong> package would result in the work area being <strong>/usr/ports/work/grep</strong>. An alternative would be to use a tmpfs as your work directory.
+</p>
+<p class='vspace'>There are a few more settings which can be found in the pkgmk.conf man page.
+</p>
+<p class='vspace'><a id='PackageGuidelines'></a>
+</p><p><h2>
+<a id='ntoc35'></a>5.5. Package Guidelines</h2><p>
+<p><h3>
+<a id='ntoc36'></a>5.5.1. General</h3><p>
+<ul><li>The name of a package should always be lowercase (e.g. name=eterm and not name=Eterm). In case the package is added to the CRUX ports system the exact same name should be use for the name of the directory in the ports structure, i.e. <span  style='color: #007a00;'>/usr/ports/???/eterm</span>.
+</li><li>Do not combine several separately distributed programs/libraries into one package. Make several packages instead.
+</li><li>The build function should never touch anything outside the work directory, and ideally should not rely on having an internet connection (say, to download sources not listed in the <span  style='color: #007a00;'>source</span> array). While <strong>pkgmk</strong> does not currently recognize git urls in the <span  style='color: #007a00;'>source</span> array, efforts are underway to add this feature, thereby removing the temptation to write a build function that reaches out to the internet for the latest git source tree.
+<div class='indent'>Apart from ensuring a consistent mechanism to verify the integrity of sources (<code>signify</code>), the policy of separating 'download' from 'build' allows a user with intermittent internet access to run <strong>pkgmk -do</strong> in the directory of every outdated package, and then go offline to finish the sysup operation. Language-specific toolchains, like those embraced by rust and python (cargo and pip, respectively), are making this policy more difficult to enforce. You are free to forego CRUX pkgutils and let the ecosystems of the <em>N</em> different languages manage their respective software in separate subdirectories (like python's <span  style='color: #007a00;'>~/.local/share/virtualenv</span> or rust's <span  style='color: #007a00;'>~/.cargo</span>), at the expense of having to learn <em>N+1</em> administration suites rather than just the 1 suite of CRUX pkgutils. Every language-specific project that appears in the official repositories represents a hard-won effort by the CRUX team to sustain the historic method of software deployment, in the face of software development trends all heading away from this model.
+</div></li></ul><p class='vspace'><h3>
+<a id='ntoc37'></a>5.5.2. Directories</h3><p>
+<ul><li>In general packages should install files in these directories. Exceptions are of course allowed if there is a good reason. But try to follow the following directory structure as close as possible.
+</li></ul><div class='vspace'></div>
+<table cellpadding='3' rules='all' frame='box' ><tr ><th  align='center'>Directory</th><th  align='center'>Description</th></tr>
+<tr ><td  align='left'><span  style='color: #007a00;'>/usr/bin/</span></td><td >User command/application binaries</td></tr>
+<tr ><td  align='left'><span  style='color: #007a00;'>/usr/sbin/</span></td><td >System binaries (e.g. daemons)</td></tr>
+<tr ><td  align='left'><span  style='color: #007a00;'>/usr/lib/</span></td><td >Libraries</td></tr>
+<tr ><td  align='left'><span  style='color: #007a00;'>/usr/include/</span></td><td >Header files</td></tr>
+<tr ><td  align='left'><span  style='color: #007a00;'>/usr/lib/&lt;prog&gt;/</span></td><td >Plug-ins, addons, etc</td></tr>
+<tr ><td  align='left'><span  style='color: #007a00;'>/usr/share/man/</span></td><td >Man pages</td></tr>
+<tr ><td  align='left'><span  style='color: #007a00;'>/usr/share/&lt;prog&gt;/</span></td><td >Data files</td></tr>
+<tr ><td  align='left'><span  style='color: #007a00;'>/usr/etc/&lt;prog&gt;/</span></td><td >Configuration files</td></tr>
+<tr ><td  align='left'><span  style='color: #007a00;'>/etc/</span></td><td >Configuration files for system software (daemons, etc)</td></tr>
+</table>
+<div class='vspace'></div><ul><li><span  style='color: #007a00;'>/opt</span> directory is reserved for manually compiled/installed applications. Packages should never place anything there.
+</li><li><span  style='color: #007a00;'>/usr/libexec/</span> is not used in CRUX, thus packages should never install anything there. Use <span  style='color: #007a00;'>/usr/lib/&lt;prog&gt;/</span> instead.
+</li></ul><p class='vspace'><h3>
+<a id='ntoc38'></a>5.5.3. Remove Junk Files</h3><p>
+<ul><li>Packages should not contain &#8220;junk files&#8221;. This includes info pages and other online documentation, man pages excluded (e.g. <span  style='color: #007a00;'>usr/doc/*</span>, <span  style='color: #007a00;'>README</span>, <span  style='color: #007a00;'>*.info</span>, <span  style='color: #007a00;'>*.html</span>, etc).
+</li><li>Files related to NLS (national language support). Ports built using GNU autoconf can be told not to install these files by passing the option <strong>--disable-nls</strong>. Other compiler toolchains often provide no such option, forcing you to clean up the package footprint by hand.
+</li><li>Useless or obsolete binaries (e.g. <span  style='color: #007a00;'>/usr/games/banner</span> and <span  style='color: #007a00;'>/sbin/mkfs.minix</span>).
+</li></ul><p class='vspace'><h3>
+<a id='ntoc39'></a>5.5.4. Pkgfile Variables</h3><p>
+<ul><li>Do not add new variables to the <span  style='color: #007a00;'>Pkgfile</span>. Only in very few cases does this actually improve the readability or the quality of the package. Further, the only variables that are guranteed to work with future versions of <strong>pkgmk</strong> are <code>name</code>, <code>version</code>, <code>release</code>, and <code>source</code>. Other names could be in conflict with internal variables in <strong>pkgmk</strong>.
+</li><li>Use the <code>$name</code> and <code>$version</code> variables to make the package easier to update/maintain. For example, source=(http://xyz.org/$name-$version.tar.gz) is better than source=(http://xyz.org/myprog-1.0.3.tar.gz) since the URL will automatically updated when you modify the <code>$version</code> variable.
+</li><li>Remember that <code>source</code> is an array, i.e. always do <code>source=(...)</code> and not <code>source=...</code>
+</li><li>Another array that <strong>pkgmk</strong> will make use of, if defined, is <code>renames</code> (introduced in CRUX 3.7). This array lets you save the downloaded source tarballs with a more descriptive filename, to avoid filename collisions when using a shared directory for downloads. See the <span  style='color: #007a00;'>Pkgfile</span> man page for more details.
+</li></ul><p class='vspace'><h3>
+<a id='ntoc40'></a>5.5.5. Pkgfile Header</h3><p>
+<p>The commented lines at the beginning of a Pkgfile do not affect the operation of <strong>pkgmk</strong>, but <strong>prt-get</strong> and other CRUX tools will make use of the information provided there. Four headers of utmost importance are:
+</p>
+<div class='vspace'></div>
+<table cellpadding='3' rules='all' frame='box' ><tr ><th  align='left'>Name</th><th  align='left'>Meaning</th></tr>
+<tr ><td >Description</td><td >A short description of the package; keep it factual</td></tr>
+<tr ><td >Maintainer</td><td >Your full name and e-mail address, obfuscated if you want</td></tr>
+<tr ><td >URL</td><td >A webpage with more information on this software package</td></tr>
+<tr ><td >Depends on</td><td >A list of dependencies, separated either by spaces or commas</td></tr>
+</table>
+<p class='vspace'><code>Depends on</code> can be omitted if there are no dependencies. To keep this line short, runtime dependencies in the 'core' collection are omitted, unless they provide a library that is dynamically linked to the built program. See the Pkgfile man page for more details.
+</p>
+<p class='vspace'>Two other headers you will often encounter when inspecting Pkgfiles are <code>Optional</code> and <code>Nice to have</code>. None of the official CRUX tools will be affected by the contents of these lines, but maintainers find it helpful to store in <code>Optional</code> the list of &#8220;soft&#8221; dependencies (libraries that will be linked to the built program, if present during compilation). This header then serves as a reminder of tests that might need to be included in the <code>build()</code> function in order to set the appropriate <code>configure</code> flags. As an end user of official ports, you might find in these headers some clues about:
+</p><ul><li>the additional functionality that can be unlocked, when dependencies beyond the bare minimum are installed before the desired port.
+</li><li>the reason that <strong>pkgmk</strong> reports a footprint mismatch.
+</li><li>the breakage that might happen if you try to install on your CRUX system a package built on someone else's CRUX system.
+</li></ul><p class='vspace'><strong>Example header</strong>
+</p>
+<div class='vspace'></div><pre class='escaped'>
+# Description: CUPS - Common UNIX Printing System
+# URL: https://openprinting.github.io/cups/
+# Maintainer: Juergen Daubert, jue at crux dot nu
+# Depends on: acl libusb zlib linux-pam
+# Optional: dbus gnutls
+</pre>
+<p class='vspace'><a id='NonRootBuilding'></a>
+</p><p><h2>
+<a id='ntoc41'></a>5.6. Building ports as unprivileged user</h2><p>
+<p>Building packages requires root privileges in order to create files with the correct owner and group. This is a security concern because a malicious or badly designed port can run arbitrary commands when its Pkgfile is sourced by the shell. The <strong>fakeroot</strong> command provides a way to build ports as normal user. Particularly when you build packages from user contributed repositories you are advised to use <strong>fakeroot</strong>:
+</p>
+<div class='vspace'></div><pre class='escaped'>
+$ fakeroot pkgmk -d
+</pre>
+<p class='vspace'><h2>
+<a id='ntoc42'></a>5.7. Ports Collections</h2><p>
+<p>Borrowing terminology from the BSD world, CRUX refers to the directory containing Pkgfile, .footprint, and .signature as a <em>port</em>. The parent directory of a port is known as a <em>collection</em> or <em>repository</em>. Distributing ports from one user to another, or from the CRUX team to users, requires a server listening on an HTTP, git, or rsync port, and a client program capable of downloading ports from that repository. The administrator of a CRUX system runs one of the scripts under <span  style='color: #007a00;'>/etc/ports/drivers</span> to copy the remote files to a local directory (usually under <span  style='color: #007a00;'>/usr/ports/</span>). Currently there are scripts for the protocols rsync(1), httpup(1), git(1). Although you can run the driver script by hand, the usual approach is to automate this task with a wrapper script (historically, <strong>ports -u</strong>). The wrapper script will choose the appropriate driver based on the extension of the file defining the remote repository (e.g., /etc/ports/core.rsync will be processed by the rsync driver). Feel free to define your own driver if you need support for a different protocol (e.g., git through SSH). But avoid naming your driver <em>inactive</em>, because that extension is reserved for disabling a repository.
+</p>
+<p class='vspace'>There are three different levels of port collections:
+</p>
+<p class='vspace'><h3>
+<a id='ntoc43'></a>5.7.1. The official collections 'core', 'opt', 'xorg' and 'compat-32'</h3><p>
+<p><span  style='color: #007a00;'>core</span>, <span  style='color: #007a00;'>opt</span>, <span  style='color: #007a00;'>xorg</span> and <span  style='color: #007a00;'>compat-32</span> are the four primary collections of CRUX. They're maintained by the CRUX development team which ensures that they're consistent and working well together. The first three are enabled by default. The <span  style='color: #007a00;'>compat-32</span> collection is disabled by default and contains 32-bit compatibility ports.
+</p>
+<p class='vspace'><h3>
+<a id='ntoc44'></a>5.7.2. The user contributed collection 'contrib'</h3><p>
+<p>The <span  style='color: #007a00;'>contrib</span> collection is a collection which is provided by experienced port maintainers: some are part of the CRUX development team, while others are regular users. Its goal is to reduce the number of duplicate ports provided in the individual collections.  If you're a seasoned port maintainer, you might even want to <a class='wikilink' href='https://crux.nu/Main/ContribRules'>join the contrib team</a>.
+</p>
+<p class='vspace'>As those ports are not provided officially by the CRUX development team, this collection is disabled by default. You can enable it by renaming the repository sync file:
+</p><pre class='escaped'>
+$ cd /etc/ports
+$ mv contrib.rsync.inactive contrib.rsync
+</pre>
+<p class='vspace'><h3>
+<a id='ntoc45'></a>5.7.3. The individual collections from CRUX users</h3><p>
+<p>Using <a class='urllink' href='https://crux.nu/Wiki/SettingUpAnHttpupRepo' rel='nofollow'>HttpUp</a> or <a class='urllink' href='https://crux.nu/Wiki/SettingUpAGitRepo' rel='nofollow'>git</a>, every user can publish his or her own ports easily; the only requirement for that is some webspace to upload the ports. Maintaining an HttpUp repository of ports, which you've tested and gotten successfully running, is a simple way to contribute back to the CRUX community.
+</p>
+<p class='vspace'><h2>
+<a id='ntoc46'></a>5.8. Package Management Frontend: prt-get</h2><p>
+<p>In its current form <strong>pkgutils</strong> does not have a concept of dependency handling. To address this a frontend utility called <strong>prt-get</strong> was created. It supports dependency handling (with the caveat mentioned below) as well as some overlap with <strong>pkgutils</strong> features and has been an official part of CRUX for some time.
+</p>
+<p class='vspace'><h3>
+<a id='ntoc47'></a>5.8.1. Functionality</h3><p>
+<p>Some examples of prt-get's functionality and use are as follows:
+</p>
+<p class='vspace'>Listing installed ports:
+</p>
+<div class='vspace'></div><pre class='escaped'>
+$ prt-get listinst
+acl
+alsa-lib
+alsa-utils
+[...]
+
+$ prt-get listinst -v
+acl 2.3.1-1
+alsa-lib 1.2.7.2-1
+alsa-utils 1.2.7-1
+[...]
+</pre>
+<p class='vspace'>Querying information about a port:
+</p>
+<div class='vspace'></div><pre class='escaped'>
+$ prt-get info acl
+Name:         acl
+Path:         /usr/ports/core
+Version:      2.3.1
+Release:      1
+Description:  Access Control Lists library
+URL:          http://savannah.nongnu.org/projects/acl
+Maintainer:   CRUX System Team, core-ports at crux dot nu
+Dependencies: attr
+</pre>
+<p class='vspace'>Searching for ports by name:
+</p>
+<div class='vspace'></div><pre class='escaped'>
+$ prt-get search glibc
+glibc
+glibc-32
+
+$ prt-get search --regex '(ba|z)sh$'
+bash
+zsh
+</pre>
+<p class='vspace'>Searching for ports by installed file:
+</p>
+<div class='vspace'></div><pre class='escaped'>
+$ prt-get fsearch gconv
+Found in /usr/ports/core/glibc:
+  /usr/lib/gconv/
+
+Found in /usr/ports/core/glibc-32:
+  /usr/lib32/gconv/
+</pre>
+<p class='vspace'>Searching for ports by words in their descriptions:
+</p>
+<div class='vspace'></div><pre class='escaped'>
+$ prt-get dsearch shell
+dash
+dialog
+dsh
+[...]
+zsh
+</pre>
+<p class='vspace'>Viewing dependency lists:
+</p>
+<div class='vspace'></div><pre class='escaped'>
+$ prt-get depends bash
+-- dependencies ([i] = installed)
+[i] ncurses
+[i] readline
+[i] bash
+
+$ prt-get quickdep bash
+ncurses readline bash
+
+$ prt-get deptree bash
+-- dependencies ([i] = installed, '--&gt;' = seen before)
+[i] bash
+[i]   readline
+[i]     ncurses
+</pre>
+<p class='vspace'>Installing ports:
+</p>
+<div class='vspace'></div><pre class='escaped'>
+$ prt-get install xterm
+</pre>
+<div class='vspace'></div><div class='indent'><span class='lfloat'><img src='http://crux.nu/doc/images/note.png' alt='' /></span>
+</div><p><strong>Note</strong><br clear='all' />
+</p><div class='indent'><em>The 'install' command does NOT process dependencies and it is usually recommended to use 'depinst' (next) instead!</em>
+</div><div class='vspace'></div><pre class='escaped'>
+$ prt-get depinst xterm
+</pre>
+<p class='vspace'>Viewing and updating outdated ports (generally after 'ports -u'):
+</p>
+<p class='vspace'>Listing installed ports which are out of date:
+</p><pre class='escaped'>
+$prt-get diff
+Differences between installed packages and ports tree:
+
+Port                Installed           Available in the ports tree
+
+imagemagick         7.1.1-41            7.1.1-44
+</pre>
+<p class='vspace'>Updating an individual port:
+</p><pre class='escaped'>
+$ prt-get update imagemagick
+</pre>
+<p class='vspace'>Updating all installed ports:
+</p><pre class='escaped'>
+$ prt-get sysup
+</pre>
+<div class='vspace'></div><div class='indent'><span class='lfloat'><img src='http://crux.nu/doc/images/note.png' alt='' /></span>
+</div><p><strong>Note</strong><br clear='all' />
+</p><div class='indent'><em>Currently 'update' and 'sysup' do not process new dependencies introduced after the initial installation of a port. To show such additions to the dependency lists of installed ports, you can chain together several invocations of <span  style='color: #007a00;'>prt-get</span> with one invocation of <span  style='color: #007a00;'>awk</span> as follows.</em>
+</div><pre class='escaped'>
+$ prt-get isinst $(prt-get quickdep $(prt-get quickdiff)) | awk '/not installed/ {print $2}'
+</pre>
+<p class='vspace'><h3>
+<a id='ntoc48'></a>5.8.2. Configuring prt-get</h3><p>
+<p><h4>
+<a id='ntoc49'></a>5.8.2.1. /etc/prt-get.conf</h4><p>
+<p><strong>prt-get</strong>'s main configuration file, '/etc/prt-get.conf', contains options that can be used to change prt-get's behavior. Notably in this file the following options can be configured:
+</p>
+<p class='vspace'><span  style='color: #007a00;'>prtdir</span> - This option can occur multiple times and specifies a collection that prt-get should search for ports. By default the 'core', 'opt', and 'xorg' collections are enabled. The 'compat-32' and 'contrib' collections are disabled by default, but by removing the '.inactive' suffix you can enable them.
+</p>
+<p class='vspace'><span  style='color: #007a00;'>logfile</span> - This option configures a file for prt-get to log its operation if desired.
+</p>
+<p class='vspace'><span  style='color: #007a00;'>runscripts</span> - This option configures prt-get to run pre-/post-install scripts if they exist in ports being installed or updated. It is recommended that this be enabled as in many cases if a pre- or post-install script exists in a port, it is required to be run for proper operation.
+</p>
+<p class='vspace'><span  style='color: #007a00;'>makecommand</span> - Setting this option as <strong>fakeroot pkgmk</strong> would allow a non-root user running <strong>prt-get</strong> to create packages with no footprint mismatches (wrong owner/group).
+</p>
+<p class='vspace'><span  style='color: #007a00;'>addcommand</span> - Setting this option as <strong>doas /usr/bin/pkgadd</strong> would allow a non-root user to escalate privileges for the purpose of installing the built package. You could also point to a pkgadd under a different path, for example a version built with <span  style='color: #007a00;'>CXXFLAGS += -DNDEBUG</span> if you want verbose debug output.
+</p>
+<p class='vspace'>You might also consider writing a <strong>sudo</strong> or <strong>doas</strong> configuration that grants permission to run <strong>prt-get</strong> itself, and then as a non-root user you would always run <strong>sudo prt-get</strong> rather than <strong>prt-get</strong> directly.
+Read the man pages for <span  style='color: #007a00;'>prt-get.conf</span> and <span  style='color: #007a00;'>sudo</span> or <span  style='color: #007a00;'>doas</span> to learn how these pieces fit together, and choose whichever option you like best. To give extra scrutiny to ports you find outside the official repositories, it helps to restrict yourself to the low-level commands <strong>pkgmk</strong> and <strong>pkgadd</strong> rather than the wrapper program <strong>prt-get</strong>. This practice forces you to be in the directory of the unofficial port, where the <span  style='color: #007a00;'>Pkgfile</span> source array and build function are more likely to receive your careful attention.
+</p>
+<p class='vspace'><h4>
+<a id='ntoc50'></a>5.8.2.2. /etc/prt-get.aliases</h4><p>
+<p><strong>prt-get</strong> has a concept of aliases which can be used in a fashion similar to the concept of 'provides' in some other Linux distributions. This file is <span  style='color: #007a00;'>/etc/prt-get.aliases</span> and contains lines in the following format:
+</p>
+<div class='vspace'></div><pre class='escaped'>
+postfix: sendmail
+exim: sendmail
+qmail: sendmail
+masqmail: sendmail
+</pre>
+<p class='vspace'>The above set of aliases indicates that <span  style='color: #007a00;'>postfix</span>, <span  style='color: #007a00;'>exim</span>, <span  style='color: #007a00;'>qmail</span>, and <span  style='color: #007a00;'>masqmail</span> are all considered sufficient to satisfy a dependency on '<span  style='color: #007a00;'>sendmail</span>' in a port.
+</p>
+<p class='vspace'>Sometimes the port maintainer will list among the required dependencies a port that bundles together a library and some demo utilities. If you only need the library when compiling the dependent port, you can use <span  style='color: #007a00;'>prt-get.aliases</span> to avoid an attempted installation of the port with demo utilities. For example, on a system where <span  style='color: #007a00;'>aom</span> does not build, but a similar port <span  style='color: #007a00;'>libaom</span> with <span  style='color: #007a00;'>-D EXAMPLES=OFF</span> does build, you would want <span  style='color: #007a00;'>prt-get depinst firefox</span> to be satisfied with <span  style='color: #007a00;'>libaom</span> and not try building <span  style='color: #007a00;'>aom</span>. This can be accomplished with the following line in <span  style='color: #007a00;'>prt-get.aliases</span>:
+</p>
+<div class='vspace'></div><pre class='escaped'>
+libaom: aom
+</pre>
+<div class='vspace'></div><div class='indent'><span class='lfloat'><img src='http://crux.nu/doc/images/note.png' alt='' /></span>
+</div><p><strong>Note</strong><br clear='all' />
+</p><div class='indent'><em>prt-get's alias function does NOT automatically replace ports during an install or depinst operation. If a port depends on '<span  style='color: #007a00;'>aom</span>' and neither '<span  style='color: #007a00;'>aom</span>' nor '<span  style='color: #007a00;'>libaom</span>' are installed, prt-get will install '<span  style='color: #007a00;'>aom</span>' as listed in the port's dependencies. If '<span  style='color: #007a00;'>libaom</span>' was installed before the depending port's install or depinst operation, on the other hand, <strong>prt-get</strong> will consider the dependency satisfied.</em>
+</div><p class='vspace'>This is NOT an exhaustive list of all of <strong>prt-get</strong>'s commands, features, and configuration options, merely a starting point. More information can be found in the man-page <span  style='color: #007a00;'>prt-get(8)</span> and the
+<a class='urllink' href='https://crux.nu/doc/prt-get%20-%20Quick%20start.html' rel='nofollow'>quick start</a> documentation.
+</p>
+<p class='vspace'><h1>
+<a id='ntoc51'></a>6. Appendix</h1><p>
+<p><h2>
+<a id='ntoc52'></a>6.1. Troubleshooting</h2><p>
+<p>Many common problems are answered in the FAQ document, so if you experience problems please check whether the <a class='urllink' href='https://crux.nu/Main/Faq' rel='nofollow'>CRUX FAQ</a> contains answers to your questions already.
+</p>
+<p class='vspace'>If you have further questions, there's a dedicated mailing list for CRUX, and an IRC channel. Actual information about these can be found on the <a class='urllink' href='https://crux.nu/Main/Community' rel='nofollow'>Community</a> page.
+</p>
+<p class='vspace'><a id='grubcfg-manually'></a>
+</p><p><h2>
+<a id='ntoc53'></a>6.2. Writing a grub config file by hand</h2><p>
+<p>If <span  style='color: #007a00;'>grub-mkconfig</span> does not work (eg., because you saved the kernel image under a non-standard name), a grub.cfg file can be created manually. For more information see the GRUB manual at <a class='urllink' href='http://www.gnu.org/software/grub/manual/' rel='nofollow'>http://www.gnu.org/software/grub/manual/</a>. A simple example configuration might look like the following:
+</p>
+<div class='vspace'></div><pre> # Display the menu for 10 seconds
+ set timeout=10
+
+ # Boot the first entry by default
+ set default=0
+
+ # Boot entries follow
+
+ # Default CRUX boot entry
+ menuentry "CRUX 3.8" {
+	linux (hd0,msdos2)/boot/vmlinuz-6.12.23 root=/dev/sda2 quiet
+ }
+
+ # Single-user recovery entry
+ menuentry "CRUX 3.8 single-user mode" {
+	linux (hd0,msdos2)/boot/vmlinuz-6.12.23 root=/dev/sda2 quiet single
+ }
+
+ # Memory test entry
+ menuentry "MemTest86+ 4.20" {
+	linux16 (hd0,msdos2)/boot/memtest86+-4.20.bin
+ }
+</pre><p class='vspace'>Save the manual configuration file as <strong>/boot/grub/grub.cfg</strong>.
+</p>
+<p class='vspace'><a id='EFI-stub-install'></a>
+</p><p><h2>
+<a id='ntoc54'></a>6.3. EFI Stub installation notes</h2><p>
+<p>GRUB and SYSLINUX offer the most familiar experience for users coming from LILO. After a one-time interaction with the BIOS and the Master Boot Record, all subsequent updates to the GRUB or SYSLINUX configuration only involve editing a flat-text file. Although with LILO you had to run <code>/sbin/lilo</code> after editing its flat-text config, for GRUB and SYSLINUX you never have to touch the contents of the bootsector or the NVRAM after the initial installation; changes to their flat-text config files are automatically detected.
+</p>
+<p class='vspace'>A third way to boot into your CRUX system involves direct interaction with the EFI variables, letting the Linux kernel image provide the required EFI bootloader code. This option has a workflow that might remind you of running <code>/sbin/lilo</code> after building and installing each new kernel.
+</p>
+<div class='vspace'></div><div class='indent'>Note: this type of booting only works in UEFI mode, and when your kernel has been built with <em>CONFIG_EFI_STUB=y</em>. Legacy MBR booting is not supported with this method.
+</div><p class='vspace'>As with GRUB and SYSLINUX, the kernel has to be told which device to use as a root filesystem. Most modern BIOSes allow you to append options like <em>root=/dev/sda2</em> to the line that boots the kernel, but some buggy UEFI implementations do not honor such appended options. To be safe, you can customize the boot options during the kernel configuration process (the <code>make menuconfig</code> step), at the expense of making it harder to put the disk in an external enclosure and boot from USB (when you want to travel lightly). If you leave the boot options empty during kernel configuration, and the BIOS does not honor your appended options, you might have to boot from a rescue disk to get back into your system and fix things.
+</p>
+<div class='vspace'></div><ul><li>Copy your built kernel to the BOOT subdirectory of the EFI system partition (mounted at <span  style='color: #007a00;'>/boot/efi</span>). For maximum compatibility, save it with the extension <span  style='color: #007a00;'>.efi</span>.
+</li></ul><div class='vspace'></div><pre> $ mkdir -p /boot/efi/BOOT
+ $ cd /boot/efi/BOOT
+ $ cp /usr/src/linux-6.12.23/arch/x86/boot/bzImage vmlinuz-6.12.23.efi
+</pre><div class='vspace'></div><ul><li>Next, create a boot entry telling the BIOS about the kernel image you just saved.
+</li></ul><div class='vspace'></div><pre> $ efibootmgr -c -d /dev/sda -L 'Linux 6.12.23' -l '\BOOT\vmlinuz-6.12.23.efi' -u 'root=/dev/sda2'
+</pre><div class='vspace'></div><ul><li>Finally, change the boot order so that the newly-created boot entry is the first one tried. Start by finding the number assigned to the newly-created entry, and then use that number to specify the desired boot order. EXAMPLE:
+</li></ul><div class='vspace'></div><pre> $ efibootmgr
+ BootCurrent: 0000
+ Timeout: 1 seconds
+ BootOrder: 0000,0001
+ Boot0000* Linux 5.15.26  HD(1,GPT,d5a44413-...,0x800,0x64000)/File(\BOOT\vmlinuz-5.15.26.efi)72006f006f0074...
+ Boot0001* Linux 6.12.23   HD(1,GPT,d5a44413-...,0x800,0x64000)/File(\BOOT\vmlinuz-6.12.23.efi)72006f006f0074...
+
+ $ efibootmgr -o 0001,0000
+</pre><div class='vspace'></div><div class='indent'>As in the UEFI installation of SYSLINUX, the subdirectory <span  style='color: #007a00;'>EFI/BOOT</span> of the EFI system partition is the default path where the BIOS expects to find a bootloader. This location is more obvious in the <code>efibootmgr</code> commands, since <code>efibootmgr</code> is agnostic about the mountpoint of your EFI system partition. The two most common ways to shorten what looks like an overly-verbose path to the kernel are:
+<ul><li>mount your EFI system partition somewhere else (and adjust the <code>mkdir</code> and <code>cd</code> commands as needed).
+</li><li>save your kernel closer to the root of the EFI system partition (and change the <code>efibootmgr</code> invocation as needed).
+</li></ul></div><p class='vspace'><a id='initramfs'></a>
+</p><p><h2>
+<a id='ntoc55'></a>6.4. Notes on Initramfs</h2><p>
+<p>A common scenario that prevents the usual practice of booting a slimmed-down kernel containing only the drivers for the root filesystem (and then loading modules to initialize other hardware) is that the root filesystem is not a physical volume, but rather a logical volume inside an encryption layer like LUKS. To handle this situation, you will need to go beyond the kernel building process outlined above, and also create a compressed filesystem image (called an <em>initramfs</em>) that contains the lvm2 and cryptsetup packages (and the drivers for usb input devices, if you chose not to compile them into the kernel). Creating such an initramfs was once an intricate procedure, but tools like <strong>dracut</strong> make it much simpler these days.
+</p>
+<p class='vspace'>If running <code>dracut</code>, and saving the initramfs alongside the kernel in the EFI system partition, had been the only deviations from the usual CRUX installation procedure, then one section of the appendix would suffice to explain how to do full-disk encryption in CRUX. But preparation for this setup begins at the partitioning stage, when you need to call commands from the <strong>lvm2</strong> and <strong>cryptsetup</strong> packages before creating and mounting your filesystems. So this section of the appendix just points to a separate document, where an <a class='urllink' href='https://crux.nu/Wiki/CRUX3-7-Encrypted' rel='nofollow'>outline for installing CRUX with full-disk encryption</a> is given from beginning to end. Even if full-disk encryption is not your desired endpoint and you just want to learn more about highly-modular kernel configs, the need for an initramfs is easier to motivate by considering a specific use case like full-disk encryption. Studying the upstream documentation for any unfamiliar command in the linked outline (eg., <span  style='color: #007a00;'>cryptsetup</span>, <span  style='color: #007a00;'>pvcreate</span>, or <span  style='color: #007a00;'>dracut</span>) is an excellent way to distinguish the functions performed at each step of the process.
+</p>
+</div>
+
+</div>
+
+
+<!--PageFooterFmt-->
+<div class="footer">
+  <div class='footnav'>
+    <a rel="nofollow" href='https://crux.nu/Main/Handbook3-8?action=edit'>Edit</a> :: 
+    <a rel="nofollow" href='https://crux.nu/Main/Handbook3-8?action=rename'>Rename</a> :: 
+    <a rel="nofollow" href='https://crux.nu/Main/Handbook3-8?action=diff'>History</a> :: 
+    <a rel="nofollow" href='https://crux.nu/Main/Handbook3-8?action=attr'>ACLs</a> :: 
+    <a rel="nofollow" href='https://crux.nu/Main/Handbook3-8?action=print' target='_blank'>Print</a> :: 
+    <a href='https://crux.nu/Main/PageIndex'>PageIndex</a> ::
+    <a href='https://crux.nu/Main/RecentChanges'>Recent Changes</a> :: 
+    <a href='https://crux.nu/Site/Search'>Search</a>
+  </div>
+  <div class='lastmod'>Page last modified on 2025-05-05 08:43</div>
+</div>
+<!--HTMLFooter-->
+
+</body>
+</html>
