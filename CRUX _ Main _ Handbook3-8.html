@@ -20,7 +20,262 @@
   .toc3 {margin-left:3em;}
   .toc4 {margin-left:4em;}
 
---></style>  <meta name='robots' content='index,follow' />
+--></style>
+
+  <!-- Print-ready styles for PDF output -->
+  <style type='text/css' media='all'>
+    @media print {
+      /* Page setup */
+      @page {
+        size: letter;
+        margin: 0.75in 0.65in 0.85in 0.65in;
+      }
+      @page :first {
+        margin-top: 0.5in;
+      }
+
+      /* Hide navigation, header, footer, and non-content elements */
+      .header, .footer, #permslink, .footnav, .lastmod,
+      .page > div[ondblclick] { display: none !important; }
+
+      /* Base typography */
+      body {
+        font-family: 'Georgia', 'Times New Roman', 'DejaVu Serif', serif;
+        font-size: 10.5pt;
+        line-height: 1.55;
+        color: #1a1a1a;
+        background: #fff !important;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+      }
+
+      .page {
+        max-width: 100% !important;
+        margin: 0 !important;
+        padding: 0 !important;
+      }
+
+      #wikitext {
+        max-width: 100% !important;
+      }
+
+      /* Headings — color-print-ready */
+      h1 {
+        font-size: 18pt;
+        color: #1a3a5c;
+        border-bottom: 2.5pt solid #1a3a5c;
+        padding-bottom: 4pt;
+        margin-top: 18pt;
+        margin-bottom: 8pt;
+        page-break-after: avoid;
+      }
+
+      h2 {
+        font-size: 14pt;
+        color: #2a5a8a;
+        border-bottom: 1.5pt solid #c0d0e0;
+        padding-bottom: 3pt;
+        margin-top: 14pt;
+        margin-bottom: 6pt;
+        page-break-after: avoid;
+      }
+
+      h3 {
+        font-size: 12pt;
+        color: #3a6a9a;
+        margin-top: 12pt;
+        margin-bottom: 5pt;
+        page-break-after: avoid;
+      }
+
+      /* Keep heading with following content */
+      h1, h2, h3, h4 {
+        page-break-after: avoid;
+        break-after: avoid;
+      }
+
+      /* Paragraphs */
+      p {
+        orphans: 3;
+        widows: 3;
+        margin-top: 4pt;
+        margin-bottom: 4pt;
+      }
+
+      /* Table of Contents styling */
+      .tocstyle {
+        background: #f0f4f8 !important;
+        border: 1.5pt solid #c0d0e0;
+        border-radius: 4pt;
+        padding: 12pt 16pt;
+        margin-bottom: 14pt;
+        page-break-inside: avoid;
+      }
+
+      .tocstyle a {
+        color: #2a5a8a !important;
+        text-decoration: none !important;
+      }
+
+      .toc1, .toc2, .toc3, .toc4 {
+        line-height: 1.7;
+      }
+
+      /* Code blocks — no overlap, boxed */
+      pre {
+        font-family: 'DejaVu Sans Mono', 'Courier New', monospace;
+        font-size: 9pt;
+        line-height: 1.45;
+        background: #f5f7fa !important;
+        border: 1pt solid #d0d8e0;
+        border-left: 3pt solid #3a6a9a;
+        border-radius: 3pt;
+        padding: 8pt 10pt;
+        margin: 6pt 0;
+        page-break-inside: avoid;
+        overflow-wrap: break-word;
+        word-wrap: break-word;
+        white-space: pre-wrap;
+      }
+
+      pre.escaped {
+        background: #f5f7fa !important;
+        border: 1pt solid #d0d8e0;
+        border-left: 3pt solid #3a6a9a;
+      }
+
+      /* Inline code */
+      code {
+        font-family: 'DejaVu Sans Mono', 'Courier New', monospace;
+        font-size: 9.5pt;
+        background: #eef2f6 !important;
+        padding: 1pt 3pt;
+        border-radius: 2pt;
+        color: #2c3e50;
+      }
+
+      /* Colored spans (command highlights) — preserve in print */
+      span[style*='color: #007a00'] {
+        color: #007a00 !important;
+        font-weight: 500;
+      }
+
+      /* Tables — clean, bordered, no overlap */
+      table {
+        border-collapse: collapse;
+        width: 100%;
+        font-size: 9.5pt;
+        margin: 8pt 0;
+        page-break-inside: avoid;
+      }
+
+      table th {
+        background: #e8eef4 !important;
+        color: #1a3a5c;
+        font-weight: bold;
+        padding: 5pt 8pt;
+        border: 1pt solid #c0c8d0;
+        text-align: left;
+      }
+
+      table td {
+        padding: 4pt 8pt;
+        border: 1pt solid #d0d8e0;
+        vertical-align: top;
+      }
+
+      table tr:nth-child(even) td {
+        background: #f8fafb !important;
+      }
+
+      /* Lists */
+      ul, ol {
+        margin-top: 4pt;
+        margin-bottom: 4pt;
+        padding-left: 20pt;
+      }
+
+      li {
+        margin-bottom: 3pt;
+        orphans: 2;
+        widows: 2;
+      }
+
+      /* Note boxes */
+      .indent {
+        background: #fdf8e8 !important;
+        border: 1pt solid #e0d090;
+        border-radius: 3pt;
+        padding: 6pt 10pt;
+        margin: 6pt 0;
+        page-break-inside: avoid;
+      }
+
+      .indent img {
+        width: 18pt;
+        height: 18pt;
+      }
+
+      /* Images — don't overflow page */
+      img {
+        max-width: 100%;
+        height: auto;
+      }
+
+      /* Links — show URL in parentheses for print */
+      a.urllink::after {
+        content: " (" attr(href) ")";
+        font-size: 8pt;
+        color: #666;
+        word-break: break-all;
+      }
+
+      a.wikilink::after {
+        content: none;
+      }
+
+      a {
+        color: #2a5a8a !important;
+        text-decoration: none !important;
+      }
+
+      /* Prevent awkward page breaks */
+      .img, .imgonly {
+        page-break-inside: avoid;
+      }
+
+      /* Ensure long pre blocks wrap */
+      pre, code {
+        max-width: 100% !important;
+        overflow-x: hidden !important;
+      }
+
+      /* Page break before major sections */
+      h1 {
+        page-break-before: always;
+      }
+
+      /* Don't break before the very first h1 (handbook title) */
+      #wikitext > p:first-child > h1:first-of-type,
+      #wikitext > h1:first-child {
+        page-break-before: avoid;
+      }
+
+      /* Footer area cleanup */
+      .footer {
+        display: none !important;
+      }
+    }
+
+    /* Screen styles for better readability (also helps browser Print Preview) */
+    @media screen {
+      #wikitext {
+        max-width: 52em;
+        margin: 0 auto;
+        padding: 0 1em;
+      }
+    }
+  </style>  <meta name='robots' content='index,follow' />
 <meta name='description' content='The handbook for CRUX {$:VERSION' />
 <script type='text/javascript' src='https://crux.nu/pub/lib/pmwiki-utils.js?st=1770750714'
           data-config='{&quot;fullname&quot;:&quot;Main.Handbook3-8&quot;,&quot;sortable&quot;:1,&quot;highlight&quot;:0,&quot;copycode&quot;:&quot;&quot;,&quot;toggle&quot;:0,&quot;localtimes&quot;:0,&quot;rediquiet&quot;:0,&quot;updrop&quot;:false,&quot;pmtoc&quot;:{&quot;Enable&quot;:0,&quot;MaxLevel&quot;:6,&quot;MinNumber&quot;:3,&quot;ParentElement&quot;:&quot;&quot;,&quot;NumberedHeadings&quot;:&quot;&quot;,&quot;EnableBacklinks&quot;:0,&quot;EnableQMarkup&quot;:0,&quot;contents&quot;:&quot;Contents&quot;,&quot;hide&quot;:&quot;hide&quot;,&quot;show&quot;:&quot;show&quot;}}' data-fullname='Main.Handbook3-8'></script>
@@ -166,11 +421,13 @@ Handbook for CRUX 3.8</h1><p>
 <span class='toc2'>
     6.3. <a href='#ntoc54'>EFI Stub installation notes</a></span><br />
 <span class='toc2'>
-    6.4. <a href='#ntoc55'>Notes on Initramfs</a></span><br /></div>
+    6.4. <a href='#ntoc55'>Notes on Initramfs</a></span><br />
+<span class='toc2'>
+    6.5. <a href='#ntoc56'>Setting Up Suckless Tools (dwm, st, dmenu)</a></span><br /></div>
 </p>
 <p class='vspace'><h1>
 <a id='ntoc1'></a>1. Preface</h1><p>
-<p><a class='wikilink' href='https://crux.nu/Profiles/PerLiden'>Per Lid�n</a> wrote this handbook. RobertMcMeekin converted it to DocBook, the <a class='wikilink' href='https://crux.nu/Main/About'>CRUX team</a> made a Wiki version. Numerous others have given feedback and improvement suggestions.
+<p><a class='wikilink' href='https://crux.nu/Profiles/PerLiden'>Per Lid�n</a> wrote this handbook. RobertMcMeekin converted it to DocBook, the <a class='wikilink' href='https://crux.nu/Main/About'>CRUX team</a> made a Wiki version. Numerous others have given feedback and improvement suggestions.
 </p>
 <p class='vspace'><h1>
 <a id='ntoc2'></a>2. Introduction</h1><p>
@@ -200,7 +457,7 @@ Handbook for CRUX 3.8</h1><p>
 </p>
 <p class='vspace'><h3>
 <a id='ntoc7'></a>2.3.2. Build Scripts</h3><p>
-<p>All package build scripts in CRUX (in package categories <span  style='color: #007a00;'>core</span>, <span  style='color: #007a00;'>opt</span>, <span  style='color: #007a00;'>xorg</span>, and <span  style='color: #007a00;'>compat-32</span>) are Copyright � 2000-2025 by Per Lid�n and the CRUX development team and are released under the <a class='urllink' href='http://www.gnu.org/copyleft/gpl.html' rel='nofollow'>GNU General Public License</a>.
+<p>All package build scripts in CRUX (in package categories <span  style='color: #007a00;'>core</span>, <span  style='color: #007a00;'>opt</span>, <span  style='color: #007a00;'>xorg</span>, and <span  style='color: #007a00;'>compat-32</span>) are Copyright � 2000-2025 by Per Lid�n and the CRUX development team and are released under the <a class='urllink' href='http://www.gnu.org/copyleft/gpl.html' rel='nofollow'>GNU General Public License</a>.
 </p>
 <p class='vspace'><h3>
 <a id='ntoc8'></a>2.3.3. NO WARRANTY</h3><p>
@@ -480,6 +737,10 @@ daunting to navigate through the interface of the <code>make menuconfig</code> s
 <p>Specifies which services to start at system startup. The services specified in this array must have a matching start/stop script in <span  style='color: #007a00;'>/etc/rc.d/</span>. When entering multi-user mode the specified scripts will be called in the specified order with the argument <strong>start</strong>. At system shutdown or when entering single-user mode these scripts will be called in the reverse order with the argument <strong>stop</strong>.
 </p>
 <p class='vspace'><span style='font-size: 83%;'>Example:</span> <code>SERVICES=(crond lo net sshd)</code>
+</p>
+<p class='vspace'><span style='font-size: 83%;'><strong>Note:</strong></span> <em>If you plan to use a graphical desktop environment or window manager (e.g., the suckless dwm stack), you should include <code>dbus</code> in the SERVICES array.</em> <code>dbus</code> <em>provides the system message bus required by many graphical applications, notification daemons, and session management utilities. See Section</em> <a href='#SucklessTools'>"Setting Up Suckless Tools"</a> <em>in the Appendix for details.</em>
+</p>
+<p class='vspace'><span style='font-size: 83%;'>Example with dbus:</span> <code>SERVICES=(crond dbus lo net sshd)</code>
 </p></td></tr><tr><td valign='center' >BLANKTIME	
 </td><td  valign='top'>
 <p>Sets the interval of inactivity, in minutes, after which the screen will be automatically blanked. Defaults to 15 minutes.
@@ -1266,6 +1527,126 @@ libaom: aom
 <p class='vspace'>If running <code>dracut</code>, and saving the initramfs alongside the kernel in the EFI system partition, had been the only deviations from the usual CRUX installation procedure, then one section of the appendix would suffice to explain how to do full-disk encryption in CRUX. But preparation for this setup begins at the partitioning stage, when you need to call commands from the <strong>lvm2</strong> and <strong>cryptsetup</strong> packages before creating and mounting your filesystems. So this section of the appendix just points to a separate document, where an <a class='urllink' href='https://crux.nu/Wiki/CRUX3-7-Encrypted' rel='nofollow'>outline for installing CRUX with full-disk encryption</a> is given from beginning to end. Even if full-disk encryption is not your desired endpoint and you just want to learn more about highly-modular kernel configs, the need for an initramfs is easier to motivate by considering a specific use case like full-disk encryption. Studying the upstream documentation for any unfamiliar command in the linked outline (eg., <span  style='color: #007a00;'>cryptsetup</span>, <span  style='color: #007a00;'>pvcreate</span>, or <span  style='color: #007a00;'>dracut</span>) is an excellent way to distinguish the functions performed at each step of the process.
 </p>
 </div>
+<p class='vspace'><a id='SucklessTools'></a>
+</p><p><h2>
+<a id='ntoc56'></a>6.5. Setting Up Suckless Tools (dwm, st, dmenu)</h2><p>
+<p>The <a class='urllink' href='https://suckless.org/' rel='nofollow'>suckless</a> project provides minimalist, source-based tools for the X Window System. The most commonly used are <strong>dwm</strong> (dynamic window manager), <strong>st</strong> (simple terminal), and <strong>dmenu</strong> (dynamic menu). Since CRUX is a source-based distribution, it pairs naturally with the suckless philosophy of compiling from source and patching to suit your needs.
+</p>
+<p class='vspace'><strong>Required System Services</strong>
+</p>
+<p class='vspace'>Before running a graphical suckless stack, the following services must be enabled in <span  style='color: #007a00;'>/etc/rc.conf</span>:
+</p>
+<div class='vspace'></div><pre>
+SERVICES=(crond dbus lo net)
+</pre>
+<p class='vspace'><strong>dbus</strong> is essential for the suckless graphical stack. Without it:
+</p>
+<ul><li>Applications that rely on D-Bus for inter-process communication (e.g., Firefox, Chromium, PulseAudio/PipeWire) will fail to start or behave erratically.
+</li><li>Notification daemons (e.g., <strong>dunst</strong>) will not receive notifications.
+</li><li>Session/seat management via <strong>elogind</strong> will not function, which can prevent proper access to audio devices, removable media, and power management.
+</li><li>Clipboard managers and other X11 utilities that communicate over D-Bus will silently fail.
+</li></ul>
+<div class='vspace'></div><div class='indent'><span class='lfloat'> <img src='https://crux.nu/doc/images/note.png' alt='' /></span>
+</div><p><strong>Note</strong><br clear='all' />
+</p><div class='indent'><em>Place <code>dbus</code> early in the SERVICES array (before <code>lo</code> and <code>net</code>) so that the message bus is available when other services start. The <code>dbus</code> service script is provided by the <span  style='color: #007a00;'>dbus</span> package from the <span  style='color: #007a00;'>opt</span> collection.</em>
+</div>
+<p class='vspace'><strong>Required Packages</strong>
+</p>
+<p class='vspace'>Install the following packages before building the suckless tools:
+</p>
+<div class='vspace'></div><pre>
+# Core X11 dependencies (from the xorg collection)
+prt-get depinst xorg
+
+# Required runtime services
+prt-get depinst dbus
+
+# Recommended: seat/session management (needed for non-root Xorg)
+prt-get depinst elogind
+
+# Recommended: audio support
+prt-get depinst alsa-lib alsa-utils
+
+# Optional but highly recommended
+prt-get depinst xorg-libxft xorg-libxinerama   # needed to compile dwm/st/dmenu
+prt-get depinst fontconfig freetype             # font rendering
+prt-get depinst libxrandr                       # multi-monitor support
+prt-get depinst harfbuzz                        # complex text shaping
+</pre>
+<p class='vspace'><strong>Building and Installing dwm, st, and dmenu</strong>
+</p>
+<p class='vspace'>Suckless tools are compiled from source. Download, configure, and install each one:
+</p>
+<div class='vspace'></div><pre>
+# Download sources
+cd /usr/src
+git clone https://git.suckless.org/dwm
+git clone https://git.suckless.org/st
+git clone https://git.suckless.org/dmenu
+
+# Build and install dwm
+cd /usr/src/dwm
+# Edit config.mk to adjust PREFIX, CFLAGS, etc.
+# Edit config.def.h (or copy to config.h) to customize keybindings, colors, fonts
+make clean install
+
+# Build and install st
+cd /usr/src/st
+make clean install
+
+# Build and install dmenu
+cd /usr/src/dmenu
+make clean install
+</pre>
+<div class='vspace'></div><div class='indent'><span class='lfloat'> <img src='https://crux.nu/doc/images/note.png' alt='' /></span>
+</div><p><strong>Note</strong><br clear='all' />
+</p><div class='indent'><em>Suckless tools are configured by editing <span  style='color: #007a00;'>config.h</span> before compiling. Copy <span  style='color: #007a00;'>config.def.h</span> to <span  style='color: #007a00;'>config.h</span> and make your changes there. This file is not overwritten by <code>git pull</code>, so your customizations are preserved across updates. Re-run <code>make clean install</code> after any configuration change.</em>
+</div>
+<p class='vspace'><strong>Setting Up .xinitrc</strong>
+</p>
+<p class='vspace'>Create or edit <span  style='color: #007a00;'>~/.xinitrc</span> to launch dwm with the required session infrastructure:
+</p>
+<div class='vspace'></div><pre>
+#!/bin/sh
+
+# Source system-wide X settings
+if [ -f /etc/X11/xinit/xinitrc.d/*.sh ]; then
+    for f in /etc/X11/xinit/xinitrc.d/*.sh; do
+        . "$f"
+    done
+fi
+
+# Start a D-Bus session bus (wraps everything below in a dbus session)
+# This is critical — many GUI apps will not work without it
+exec dbus-launch --sh-syntax --exit-with-session dwm
+</pre>
+<p class='vspace'>Then start X with:
+</p>
+<div class='vspace'></div><pre>
+startx
+</pre>
+<p class='vspace'><strong>Optional Companion Tools</strong>
+</p>
+<p class='vspace'>The following tools complement a suckless desktop setup:
+</p>
+<div class='vspace'></div>
+<table cellpadding='3' rules='all' frame='box' ><tr ><th  align='left'>Tool</th><th  align='left'>Purpose</th><th  align='left'>Install</th></tr>
+<tr ><td  align='left'><strong>dunst</strong></td><td >Lightweight notification daemon</td><td ><code>prt-get depinst dunst</code></td></tr>
+<tr ><td  align='left'><strong>slock</strong></td><td >Simple screen locker (suckless)</td><td ><code>prt-get depinst slock</code> or build from source</td></tr>
+<tr ><td  align='left'><strong>feh</strong></td><td >Image viewer / wallpaper setter</td><td ><code>prt-get depinst feh</code></td></tr>
+<tr ><td  align='left'><strong>picom</strong></td><td >Compositor (transparency, shadows)</td><td ><code>prt-get depinst picom</code></td></tr>
+<tr ><td  align='left'><strong>xclip</strong></td><td >Clipboard utility for X11</td><td ><code>prt-get depinst xclip</code></td></tr>
+<tr ><td  align='left'><strong>xsetroot</strong></td><td >Set root window properties (status bar text)</td><td >Included in <span  style='color: #007a00;'>xorg</span></td></tr>
+</table>
+<p class='vspace'><strong>Troubleshooting</strong>
+</p>
+<div class='vspace'></div><ul><li><strong>dwm compiles but X does not start:</strong> Ensure <code>dbus</code> is in the SERVICES array in <span  style='color: #007a00;'>/etc/rc.conf</span> and that the system dbus daemon is running (<code>pgrep dbus-daemon</code>).
+</li><li><strong>"cannot open display" errors:</strong> Make sure you are starting X from a virtual console (tty), not from within an existing X session. Use <code>startx</code> rather than calling <code>dwm</code> directly.
+</li><li><strong>No audio in GUI apps:</strong> Verify <code>alsa-lib</code> and <code>alsa-utils</code> are installed. Run <code>alsamixer</code> to check that channels are not muted. If using PipeWire or PulseAudio, ensure <code>dbus</code> is running.
+</li><li><strong>Firefox/Chromium won't launch:</strong> These browsers require a running D-Bus session bus. Confirm that your <span  style='color: #007a00;'>~/.xinitrc</span> uses <code>dbus-launch</code> or that <code>dbus</code> is in SERVICES.
+</li><li><strong>Permission denied for /dev/dri or input devices:</strong> Install and enable <code>elogind</code>. Add your user to the <code>video</code> and <code>input</code> groups: <code>usermod -aG video,input yourusername</code>.
+</li></ul>
+</p>
 
 </div>
 
